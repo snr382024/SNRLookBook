@@ -1,0 +1,151 @@
+$template-two-gap: 3vh; // Adjust the gap as needed
+$template-two-gap-small: 4vh; // Adjust the gap as needed
+$background-shadow: 0 2px 14px 0 rgba(0,0,0,0.3);
+
+
+.template-two-container {
+  margin-top: 4.5vh;
+
+  @media (min-width: 950px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $template-two-gap-small;
+  }
+
+  @media (max-width: 949px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    padding: 0 $template-two-gap; // Horizontal padding
+  }
+
+  .image-wrapper {
+    @media (min-width: 950px) {
+      display: contents;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex: 1; 
+      
+    }
+
+    @media (max-width: 949px) {
+      display: contents; // Ensures image-wrapper does not affect layout
+    }
+
+    .column-type2,
+    .column-type3,
+    .column-type4 {
+      margin-bottom: 2vh;
+
+      @media (min-width: 950px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+
+      @media (max-width: 949px) {
+        margin-bottom: 0;
+        margin-left: 3vw; // Uniformly adjust margins if needed
+        margin-right: 3vw;
+      }
+    }
+
+    .square8,
+    .square9,
+    .square2,
+    .rectangle,
+    .small-rectangle,
+    .small-rectangle1 {
+      margin-bottom: 3.3vh;
+      flex: 1 0 auto;
+
+      img {
+        width: 12vw;
+        height: auto;
+        box-shadow: $background-shadow;
+      }
+    }
+
+    .rectangle {
+      img {
+        width: 12vw;
+        height: 65vh;
+        box-shadow: $background-shadow;
+      }
+    }
+
+    .square8{
+      img{
+        width: 12vw;
+        height: 25vh;
+        box-shadow: $background-shadow;
+      }
+    }
+
+    .square9{
+      img{
+        width: 12vw;
+        height: 25vh;
+        box-shadow: $background-shadow;
+      }
+    }
+
+    .small-rectangle,
+    .small-rectangle1 {
+      img {
+        width: 12vw;
+        height: 44.6vh;
+        box-shadow: $background-shadow;
+      }
+    }
+
+    .square2,
+    .square3 {
+      img {
+        width: 12vw;
+        height: 20vh;
+        box-shadow:$background-shadow;
+      }
+    }
+
+    .square3{
+      margin-bottom: 3.3vh;
+    }
+  }
+
+  .video-container {
+    flex: 2;
+    max-height: 94vh;
+    margin-bottom: 5vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: $background-shadow;
+
+    @media (max-width: 949px) {
+      margin-left: 25px; // Uniformly adjust margins if needed
+      margin-right: 25px; // Added to balance the video positioning
+      width: 88vw; // Adjust the size as needed
+      height: 55vw;
+      grid-column: 1 / -1; // Stretch video across all columns
+    }
+    @media (max-width: 800px){
+      height: 50vh;
+    }
+    @media (max-width: 650px){
+      height: 50vh;
+    }
+    @media (max-width: 500px){
+      height: 50vh;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+  }
+}
