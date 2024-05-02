@@ -1,7 +1,13 @@
 $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
 
 .template-five-container {
-  margin: 3.5vh;
+  margin-top: 3.5vh;
+  margin-right: 2.5vh;
+
+  @media (max-width: 950px) {
+    margin: 3.5vh;
+  }
+
   display: flex;
   flex-direction: row;
   justify-content: space-around; // This will distribute space around all items evenly
@@ -29,20 +35,32 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
     .column-type1,
     .column-type2,
     .column-type3 {
-      flex: 1; // Each column takes up 1 part of the space
+      flex: 1; 
       margin-bottom: 1.5vh;
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      @media (max-width: 950px) {
+        margin: 1.5vh;
+      }
+
+      @media (max-width: 550px) {
+        margin: .2vh;
+      }
+
+
       .rectangle {
         margin-bottom: 3.3vh;
+        
         img {
           width: 12vw;
           height: 18vh;
+          
           box-shadow: $background-shadow;
         }
       }
+
 
       .rectangle {
         position: relative;
@@ -53,8 +71,8 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         // Overlay and icon wrapper
         .arrow-icon-wrapper {
           position: absolute;
-          right: 10px;
-          bottom: 10px;
+          right: -15px;
+          bottom: -155px;
           width: 35px;
           height: 35px;
           background-color: rgba(0, 0, 0, 0.6);
@@ -72,16 +90,29 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
             opacity: 1;
             visibility: visible;
           }
+
+          @media (max-width: 950px) {
+            width: 10px;
+            height: 10px;
+            right: 5px;
+            bottom: 5px;        
+          }
         }
 
         // Arrow icon specific styling
         .arrow-icon {
           width: 25px; // Independently adjustable size of the arrow
           height: 25px; // Independently adjustable size of the arrow
+          @media (max-width: 950px) {
+            width: 10px;
+            height: 10px;      
+          }
         }
         img {
           width: 14vw;
           height: 95vh;
+          max-height: 95vh;
+
           transition: transform 0.6s;
           transform-style: preserve-3d;
           box-shadow: $background-shadow;
@@ -133,6 +164,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         margin-left: 4vh;
     }
 
+  
   }
 
   .video-container {
@@ -152,80 +184,56 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   // Media query for smaller screens
 
   @media (max-width: 950px) {
-    // Adjust the pixel value as needed
     flex-direction: column;
     align-items: center;
-
+  
     .image-wrapper {
-      flex: 1 0 60%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-
+      justify-content: space-between; // This helps in spacing out the columns
+  
       .column-type1,
       .column-type2 {
-        width: calc(25% - 6vw);
-        margin-bottom: -12vh;
+        width: calc(50% - 2vw); // Adjust width calculation for better responsiveness
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 12px;
-
+        padding: 0 1vw; // Add horizontal padding to create space between columns
+  
         .square,
         .rectangle {
-          margin-bottom: 3.3vh;
           img {
-            width: 20vw;
-            height: 15vh;
+            width: 100%; // Ensure images use the full width of their container
+            height: auto; // Maintain aspect ratio
             box-shadow: $background-shadow;
           }
         }
+        
         .rectangle {
-          width: 20vw;
-          height: 45vh;
+          width: 15vw;
+          height: 41vh; // Fixed height for rectangles
           img {
-            width: 20vw;
-            height: 45vh;
-            box-shadow: $background-shadow;
+            height: 100%; // Ensure images use the full height of their container
           }
-        }
-      }
-
-      .column-type1 {
-        .rectangle {
-          order: 2;
-        }
-      }
-
-      .column-type2 {
-        .square {
-          order: 2;
-        }
-      }
-    }   
-    
-    .video-container {
-      justify-content: center; // Centers horizontally in flex container
-      align-items: center;
-      display: flex; // Enables flexbox
-
-      width: 100%; // Adjust the size as needed
-      height: 40vh;
-      margin-bottom: 1vh;
-      margin-top: 3vh;
-
-      video {
-        width: auto;
-        height: 100%;
-        object-position: center;
-        transform: scale(.5);
-        box-shadow: $background-shadow;
-        @media (max-width: 375px) {
-          max-height: 100vh;
-          transform: scale(.7);
         }
       }
     }
- 
+  
+    .video-container {
+      width: 100%; // Full width to match the layout
+      height: 40vh; // Fixed height for consistency
+      margin-top: 2vh; // Add top margin for spacing
+      display: flex;
+      justify-content: center; // Center the video horizontally
+      align-items: center; // Center the video vertically
+  
+      video {
+        width: 100%; // Ensure video fills the container
+        height: 100%; // Maintain aspect ratio
+        object-fit: cover; // Ensure the video covers the full area without distortion
+        box-shadow: $background-shadow;
+      }
+    }
   }
+  
 }

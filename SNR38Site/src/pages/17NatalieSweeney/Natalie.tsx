@@ -2,7 +2,7 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 
-import NatalieBanner from "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie-Banner.png";
+const NatalieBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie-Banner.png";
 
 const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie 3 .png";
 const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie 2.png";

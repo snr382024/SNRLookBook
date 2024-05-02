@@ -5,7 +5,7 @@ import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 const ShirellBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell-Banner.jpeg";
 
 const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detailcopy.jpg";
-const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SDetail.png";
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail Shot.png";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/detail4.png";
 

@@ -231,11 +231,14 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
               </div>
             </div>
             <div
-              className={`arrow-icon-wrapper ${isVisible[1] ? "visible" : ""}`}
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
             >
               <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
           </div>
+        </div>
+        <div className="column-type3">
+          <ImageCarousel images={Squareimages} />
         </div>
         <div className="column-type1">
           <div
@@ -255,24 +258,10 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
               </div>
             </div>
             <div
-              className={`arrow-icon-wrapper ${isVisible[2] ? "visible" : ""}`}
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
             >
               <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
-          </div>
-        </div>
-        <div className="column-type2">
-          <div className="square">
-            <img src={images[0].src} alt={images[0].alt} />
-          </div>
-          <div className="square">
-            <img src={images[1].src} alt={images[1].alt} />
-          </div>
-          <div className="square">
-            <img src={images[2].src} alt={images[2].alt} />
-          </div>
-          <div className="square">
-            <img src={images[3].src} alt={images[3].alt} />
           </div>
         </div>
       </div>
