@@ -17,7 +17,6 @@ import LongFront3 from "./Media/Shireel 1 Side.png";
 import LongBack3 from "./Media/Shireel 1 Front p2.png";
 
 
-import ShirellVideo from "./Media/Caitlin_Lookbook2.mp4";
 import "./shirell.scss";
 
 const ShirellBattle = () => {
@@ -38,8 +37,6 @@ const ShirellBattle = () => {
     { src: LongBack3, alt: "LongBack3" },
   ];
 
-  const videoSource = ShirellVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -48,7 +45,7 @@ const ShirellBattle = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc={videoSource} />
+      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };
