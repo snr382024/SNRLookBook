@@ -2,22 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 
-import NatalieBanner from "../../assets/bannerImages/Natalie-Banner.png";
+import NatalieBanner from "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie-Banner.png";
 
-import Short1 from "./Media/natalie 3 .png";
-import Short2 from "./Media/natalie 2.png";
-import Short3 from "./Media/Natalie Detail.png";
-import Short4 from "./Media/detail 2 .png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie 3 .png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie 2.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/detail 2 .png";
 
-import LongFront1 from "./Media/Natalie 1 .png";
-import LongBack1 from "./Media/Natalie 4 .png";
-import LongFront2 from "./Media/natalie5 .png";
-import LongBack2 from "./Media/natalie 56 .png";
-import LongFront3 from "./Media/Natalie.png";
-import LongBack3 from "./Media/Natalie.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie 1 .png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie 4 .png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie5 .png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/natalie 56 .png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie.png";
 
 
-import NatalieVideo from "./Media/Caitlin_Lookbook2.mp4";
 import "./natalie.scss";
 
 const NatalieSweeney = () => {
@@ -39,7 +38,6 @@ const NatalieSweeney = () => {
 
   ];
 
-  const videoSource = NatalieVideo;
 
 
   return (
@@ -50,7 +48,7 @@ const NatalieSweeney = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc={videoSource} />
+      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

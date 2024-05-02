@@ -2,23 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
-import SierraBanner from "../../assets/bannerImages/Sierra-Banner.png";
+const SierraBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sierra-Banner.png";
 
-import Short1 from "./Media/SierraLook1Detail.png";
-import Short2 from "./Media/SierraLook4Detail.jpg";
-import Short3 from "./Media/SierraLook3Detail.jpg";
-import Short4 from "./Media/SierraLook2Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook1Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook4Detail.jpg";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook3Detail.jpg";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook2Detail.png";
 
-import LongFront1 from "./Media/SierraLook1Front.png";
-import LongBack1 from "./Media/SierraLook1Back.png";
-import LongFront2 from "./Media/SierraLook4Front.jpg";
-import LongBack2 from "./Media/SierraLook4Back.jpg";
-import LongFront3 from "./Media/SierraLook3Front.jpg";
-import LongBack3 from "./Media/SierraLook3Back.jpg";
-import LongFront4 from "./Media/SierraLook2Front.png";
-import LongBack4 from "./Media/SierraLook2Back.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook1Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook1Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook4Front.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook4Back.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook3Front.jpg";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook3Back.jpg";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook2Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SierraLook2Back.png";
 
-import SierraVideo from "./Media/Caitlin_Lookbook2.mp4";
 
 import "./sierra.scss";
 
@@ -42,7 +41,6 @@ const SierraWeissner = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = SierraVideo;
 
   return (
     <div>
@@ -52,7 +50,7 @@ const SierraWeissner = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc={videoSource} />
+      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

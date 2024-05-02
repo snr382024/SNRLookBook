@@ -2,23 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
-import Short1 from "./Media/Annika 3 .png";
-import Short2 from "./Media/AnnikaDay2Look2Detail.png";
-import Short3 from "./Media/AnnikaDay2Look3Detail.png";
-import Short4 from "./Media/AnnikaDay2Detail.jpg";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika 3 .png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look2Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look3Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Detail.jpg";
 
-import LongFront1 from "./Media/Annika Front .png";
-import LongBack1 from "./Media/Annika 2 .png";
-import LongFront2 from "./Media/AnnikaDay2Look2Front.png";
-import LongBack2 from "./Media/AnnikaDay2Look2Side.png";
-import LongFront3 from "./Media/AnnikaDay2Look3Front.png";
-import LongBack3 from "./Media/AnnikaDay2Look3Back.png";
-import LongFront4 from "./Media/AnnikaDay2Front.jpg";
-import LongBack4 from "./Media/AnnikaDay2Back.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika Front .png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika 2 .png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look2Front.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look2Side.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look3Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look3Back.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Front.jpg";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Back.jpg";
 
-import AnnikaVideo from "./Media/Caitlin_Lookbook2.mp4";
-
-import AnnikaBanner from "../../assets/bannerImages/Annika-Banner.png";
+const AnnikaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika-Banner.png";
 import "./annika.scss";
 
 const AnnikaGeissberger = () => {
@@ -41,7 +39,6 @@ const AnnikaGeissberger = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = AnnikaVideo;
 
   return (
     <div>
@@ -51,7 +48,7 @@ const AnnikaGeissberger = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

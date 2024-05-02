@@ -2,23 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
-import Short1 from "./Media/MoLook4Detail.png";
-import Short2 from "./Media/MoLook1Detail.png";
-import Short3 from "./Media/MoLook3Detail.png";
-import Short4 from "./Media/MoLook2Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook4Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook1Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Detail.png";
 
-import LongFront1 from "./Media/MoLook4Front.png";
-import LongBack1 from "./Media/MoLook4Side.png";
-import LongFront2 from "./Media/mo fixed hair.png";
-import LongBack2 from "./Media/MoLook1Side.png";
-import LongFront3 from "./Media/MoLook3Front.png";
-import LongBack3 from "./Media/MoLook3Side.png";
-import LongFront4 from "./Media/MoLook2Front.png";
-import LongBack4 from "./Media/MoLook2Back.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook4Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook4Side.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/mo fixed hair.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook1Side.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Side.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Back.png";
 
-import MoVideo from "./Media/Caitlin_Lookbook2.mp4";
-
-import MoBanner from "../../assets/bannerImages/Mo-Banner.png";
+const MoBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Mo-Banner.png";
 import "./mo.scss";
 
 const MoWalsh = () => {
@@ -41,9 +39,6 @@ const MoWalsh = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = MoVideo;
-
-
   return (
     <div>
       <ImageCarousel
@@ -52,7 +47,7 @@ const MoWalsh = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc={videoSource} />
+      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

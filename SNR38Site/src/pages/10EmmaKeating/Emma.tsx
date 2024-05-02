@@ -2,23 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
-import Short1 from "./Media/Detail Look 1.jpg";
-import Short2 from "./Media/Look 4 Detail .png";
-import Short3 from "./Media/Look 2 Detail.png";
-import Short4 from "./Media/Detail Look 3 .png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail Look 1.jpg";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 4 Detail .png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 2 Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail Look 3 .png";
 
-import LongFront1 from "./Media/Emma Look 1 Front_.png";
-import LongBack1 from "./Media/Emma Side Look 1.png";
-import LongFront2 from "./Media/Look 4 Front.png";
-import LongBack2 from "./Media/Look 4 Side.png";
-import LongFront3 from "./Media/Look 2 Front.png";
-import LongBack3 from "./Media/Look 2 Back .png";
-import LongFront4 from "./Media/Look 3 Front.png";
-import LongBack4 from "./Media/Look 3 Back.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma Look 1 Front_.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma Side Look 1.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 4 Front.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 4 Side.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 2 Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 2 Back .png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 3 Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 3 Back.png";
 
-import EmmaVideo from "./Media/Caitlin_Lookbook2.mp4";
-
-import EmmaBanner from "../../assets/bannerImages/Emma-Banner.png";
+const EmmaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma-Banner.png";
 import "./emma.scss";
 
 const EmmaKeating = () => {
@@ -41,8 +39,6 @@ const EmmaKeating = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = EmmaVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -51,7 +47,7 @@ const EmmaKeating = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc={videoSource} />
+      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

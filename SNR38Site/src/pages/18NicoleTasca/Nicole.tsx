@@ -2,24 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
-import Short1 from "./Media/NicoleLook1Detail.png";
-import Short2 from "./Media/NicoleLook4Detail.png";
-import Short3 from "./Media/NicoleLook2Detail.png";
-import Short4 from "./Media/NicoleLook3Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook1Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Detail.png";
 
-import LongFront1 from "./Media/NicoleLook1Front.png";
-import LongBack1 from "./Media/NicoleLook1Back.png";
-import LongFront2 from "./Media/NicoleLook4Front.png";
-import LongBack2 from "./Media/NicoleLook4Back.png";
-import LongFront3 from "./Media/NicoleLook2Front.png";
-import LongBack3 from "./Media/NicoleLook2Side.png";
-import LongFront4 from "./Media/NicoleLook3Front.png";
-import LongBack4 from "./Media/NicoleLook3Back.png";
-
-import NicoleVideo from "./Media/Caitlin_Lookbook2.mp4";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook1Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook1Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4Front.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4Back.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Side.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Back.png";
 
 
-import NicoleBanner from "../../assets/bannerImages/Nicole-Banner.png";
+const NicoleBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Nicole-Banner.png";
 import "./nicole.scss";
 
 const NicoleTasca = () => {
@@ -42,8 +40,6 @@ const NicoleTasca = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = NicoleVideo;
-
 
   return (
     <div>
@@ -53,7 +49,7 @@ const NicoleTasca = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

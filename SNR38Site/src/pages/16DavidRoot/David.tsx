@@ -3,23 +3,22 @@ import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
 
-import Short1 from "./Media/David - Look Vest - Detail.png";
-import Short2 from "./Media/DAVID LOOK 1 DETAIL.jpg";
-import Short3 from "./Media/DavidJacketDay2Detail.png";
-import Short4 from "./Media/DAVID LOOK 2 DETAIL.jpg";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David - Look Vest - Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1 DETAIL.jpg";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 DETAIL.jpg";
 
-import LongFront1 from "./Media/David - Look Vest - Front.png";
-import LongBack1 from "./Media/David - Look Vest - Back.png";
-import LongFront2 from "./Media/DAVID LOOK 1 FRONT copy.jpg";
-import LongBack2 from "./Media/DAVID LOOK 1 BACK copy.jpg";
-import LongFront3 from "./Media/DavidJacketDay2Front.png";
-import LongBack3 from "./Media/DavidJacketDay2Back.png";
-import LongFront4 from "./Media/DAVID LOOK 2 FRONT.jpg";
-import LongBack4 from "./Media/DAVID LOOK 2 BACK.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David - Look Vest - Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David - Look Vest - Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1 FRONT copy.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1 BACK copy.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Back.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 FRONT.jpg";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 BACK.jpg";
 
-import DavidVideo from "./Media/Caitlin_Lookbook2.mp4";
 
-import DavidBanner from "../../assets/bannerImages/David-Banner.png";
+const DavidBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David-Banner.png";
 import "./david.scss";
 
 const DavidRoot = () => {
@@ -42,7 +41,6 @@ const DavidRoot = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = DavidVideo;
 
   return (
     <div>
@@ -52,7 +50,7 @@ const DavidRoot = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc={videoSource} />
+      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

@@ -2,23 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
-import Short1 from "./Media/EvaLook2Detail.png";
-import Short2 from "./Media/EvaLook3Detail.png";
-import Short3 from "./Media/EvaLook4Detail.png";
-import Short4 from "./Media/EvaLook1Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook2Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook3Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook4Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook1Detail.png";
 
-import LongFront1 from "./Media/EvaLook2Front.png";
-import LongBack1 from "./Media/EvaLook2Back.png";
-import LongFront2 from "./Media/EvaLook3Front.jpg";
-import LongBack2 from "./Media/EvaLook3Side.jpg";
-import LongFront3 from "./Media/EvaLook4Front.png";
-import LongBack3 from "./Media/EvaLook4Back.png";
-import LongFront4 from "./Media/EvaLook1Front.png";
-import LongBack4 from "./Media/EvaLook1Side.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook2Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook2Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook3Front.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook3Side.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook4Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook4Back.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook1Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EvaLook1Side.png";
 
-import EvaVideo from "./Media/Caitlin_Lookbook2.mp4";
 
-import EvaBanner from "../../assets/bannerImages/Eva-Banner.png";
+const EvaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Eva-Banner.png";
 import "./eva.scss";
 
 const EvaReed = () => {
@@ -41,7 +40,6 @@ const EvaReed = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = EvaVideo;
 
   return (
     <div>
@@ -51,7 +49,7 @@ const EvaReed = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc={videoSource} />
+      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

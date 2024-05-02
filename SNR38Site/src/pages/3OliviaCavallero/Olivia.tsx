@@ -3,24 +3,22 @@ import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
 
-import OliviaShort1 from "./Media/DSC01899.jpg";
-import OliviaShort2 from "./Media/DSC01965.jpg";
-import OliviaShort3 from "./Media/DSC02003.jpg";
-import OliviaShort4 from "./Media/DSC01934.jpg";
+const OliviaShort1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01899.jpg";
+const OliviaShort2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01965.jpg";
+const OliviaShort3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC02003.jpg";
+const OliviaShort4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01934.jpg";
 
-import OliviaLongFront1 from "./Media/DSC018851.jpg";
-import OliviaLongBack1 from "./Media/ClareBackLegEdit.png";
-import OliviaLongFront2 from "./Media/DSC01960.jpg";
-import OliviaLongBack2 from "./Media/DSC01952.jpg";
-import OliviaLongFront3 from "./Media/DSC01999.jpg";
-import OliviaLongBack3 from "./Media/DSC01989.jpg";
-import OliviaLongFront4 from "./Media/LOOK 1 FRONT.png";
-import OliviaLongBack4 from "./Media/BACK .png";
-
-import OliviaVideo from "./Media/Caitlin_Lookbook2.mp4";
+const OliviaLongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC018851.jpg";
+const OliviaLongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/ClareBackLegEdit.png";
+const OliviaLongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01960.jpg";
+const OliviaLongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01952.jpg";
+const OliviaLongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01999.jpg";
+const OliviaLongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01989.jpg";
+const OliviaLongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 1 FRONT.png";
+const OliviaLongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/BACK .png";
 
 
-import OliviaBanner from "../../assets/bannerImages/Olivia-Banner.png";
+const OliviaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Olivia-Banner.png";
 import "./olivia.scss";
 
 const  OliviaCavallero = () => {
@@ -44,10 +42,6 @@ const  OliviaCavallero = () => {
     { src: OliviaLongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = OliviaVideo;
-
-
-
   return (
     <div>
       <ImageCarousel
@@ -56,7 +50,7 @@ const  OliviaCavallero = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

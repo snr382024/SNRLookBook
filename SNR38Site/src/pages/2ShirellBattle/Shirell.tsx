@@ -2,19 +2,19 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 
-import ShirellBanner from "../../assets/bannerImages/Shirell-Banner.jpeg";
+const ShirellBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell-Banner.jpeg";
 
-import Short1 from "./Media/Detailcopy.jpg";
-import Short2 from "./Media/Detail.png";
-import Short3 from "./Media/Detail Shot.png";
-import Short4 from "./Media/detail4.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detailcopy.jpg";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail Shot.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/detail4.png";
 
-import LongFront1 from "./Media/Shirell Look 2 Front.png";
-import LongBack1 from "./Media/Shirell 2 Back.png";
-import LongFront2 from "./Media/Shireel Look 3 front.png";
-import LongBack2 from "./Media/Shirell 3 Front.png";
-import LongFront3 from "./Media/Shireel 1 Side.png";
-import LongBack3 from "./Media/Shireel 1 Front p2.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell Look 2 Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell 2 Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel Look 3 front.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell 3 Front.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel 1 Side.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel 1 Front p2.png";
 
 
 import "./shirell.scss";

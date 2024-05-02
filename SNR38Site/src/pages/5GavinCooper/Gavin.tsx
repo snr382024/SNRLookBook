@@ -2,21 +2,20 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate5 from "../../components/PageTemplate5/TemplateFive";
 
-import GavinBanner from "../../assets/bannerImages/Gavin-Banner.png";
+const GavinBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Gavin-Banner.png";
 
-import Short1 from "./Media/gavin look 3 detail.jpg";
-import Short2 from "./Media/gavin look 3 detail 4.jpg";
-import Short3 from "./Media/gavin look 2 detail 2 copy.jpg";
-import Short4 from "./Media/gavin look 2 detail copy.jpg";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 detail.jpg";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 detail 4.jpg";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 detail 2 copy.jpg";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 detail copy.jpg";
 
-import LongFront1 from "./Media/gavin look 1 front.jpg";
-import LongBack1 from "./Media/tates back fixed.png";
-import LongFront2 from "./Media/gavin look 2 front copy.jpg";
-import LongBack2 from "./Media/gavin look 2 front 2 copy.jpg";
-import LongFront3 from "./Media/gavin look 3 front 2.jpg";
-import LongBack3 from "./Media/gavin look 3 side copy.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 1 front.jpg";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/tates back fixed.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 front copy.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 front 2 copy.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 front 2.jpg";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 side copy.jpg";
 
-import GavinVideo from "./Media/Caitlin_Lookbook2.mp4";
 import "./gavin.scss";
 
 const GavinCooper = () => {
@@ -37,8 +36,6 @@ const GavinCooper = () => {
     { src: LongBack3, alt: "LongBack3" },
   ];
 
-  const videoSource = GavinVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -47,7 +44,7 @@ const GavinCooper = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc={videoSource} />
+      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

@@ -2,24 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
-import Short1 from "./AliahMedia/Aliah - Look Red Puff - Detail.png";
-import Short2 from "./AliahMedia/AliahLastLookDetail.png";
-import Short3 from "./AliahMedia/AliahRedDressDetail.png";
-import Short4 from "./AliahMedia/AliahRuffleTopDetail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah - Look Red Puff - Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahLastLookDetail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRedDressDetail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRuffleTopDetail.png";
 
-import LongFront1 from "./AliahMedia/Aliah - Look Red Puff - Front.png";
-import LongBack1 from "./AliahMedia/Aliah - Look Red Puff - Side Pose.png";
-import LongFront2 from "./AliahMedia/AliahLastLookFront.png";
-import LongBack2 from "./AliahMedia/AliahLastLookBack.png";
-import LongFront3 from "./AliahMedia/AliahRedDressFront.png";
-import LongBack3 from "./AliahMedia/AliahRedDressBack.png";
-import LongFront4 from "./AliahMedia/AliahRuffleTopFront.png";
-import LongBack4 from "./AliahMedia/AliahRuffleTopBack.png";
-
-import AliahVideo from "./AliahMedia/Caitlin_Lookbook2.mp4";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah - Look Red Puff - Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah - Look Red Puff - Side Pose.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahLastLookFront.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahLastLookBack.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRedDressFront.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRedDressBack.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRuffleTopFront.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AliahRuffleTopBack.png";
 
 
-import AliahBanner from "../../assets/bannerImages/Aliah-Banner.png";
+const AliahBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah-Banner.png";
 import "./aliah.scss";
 
 const AliahChammoro = () => {
@@ -42,8 +40,6 @@ const AliahChammoro = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = AliahVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -52,7 +48,7 @@ const AliahChammoro = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc={videoSource} />
+      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

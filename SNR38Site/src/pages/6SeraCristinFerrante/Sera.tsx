@@ -2,23 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
-import Short1 from "./Media/Serra - Look 1 - Detail.png";
-import Short2 from "./Media/Serra - Look 3 - Detail.png";
-import Short3 from "./Media/SeraReshotLookDetail.png";
-import Short4 from "./Media/Serra - Look 2 - Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 1 - Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 3 - Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SeraReshotLookDetail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 2 - Detail.png";
 
-import LongFront1 from "./Media/Serra - Look 1 - Pose Front.png";
-import LongBack1 from "./Media/Serra - Look 1 - Pose.png";
-import LongFront2 from "./Media/Serra - Look 3 - Front Pose.png";
-import LongBack2 from "./Media/Serra - Look 3 - Side Pose.png";
-import LongFront3 from "./Media/SeraReshotLookFront.png";
-import LongBack3 from "./Media/SeraReshotLookBack.png";
-import LongFront4 from "./Media/Serra - Look 2 - Pose.png";
-import LongBack4 from "./Media/Serra - Look 2 - Side.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 1 - Pose Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 1 - Pose.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 3 - Front Pose.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 3 - Side Pose.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SeraReshotLookFront.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SeraReshotLookBack.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 2 - Pose.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Serra - Look 2 - Side.png";
 
-import SeraVideo from "./Media/Caitlin_Lookbook2.mp4";
-
-import SeraBanner from "../../assets/bannerImages/Sera-Banner.png";
+const SeraBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sera-Banner.png";
 import "./sera.scss";
 
 const SeraCristinFerrante = () => {
@@ -41,8 +39,6 @@ const SeraCristinFerrante = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = SeraVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -51,7 +47,7 @@ const SeraCristinFerrante = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc={videoSource} />
+      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

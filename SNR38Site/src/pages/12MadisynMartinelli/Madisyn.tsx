@@ -2,24 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate3 from "../../components/PageTemplate3/TemplateThree";
 
-import Short1 from "./Media/Madisyn - Look 1 Day 2 - Detail Mesh.png";
-import Short2 from "./Media/Detail .png";
-import Short3 from "./Media/Detail 2_.jpg";
-import Short4 from "./Media/MadisonLook2Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn - Look 1 Day 2 - Detail Mesh.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail .png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail 2_.jpg";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MadisonLook2Detail.png";
 
-import LongFront1 from "./Media/Madisyn - Look 1 Day 2 - Pose Front.png";
-import LongBack1 from "./Media/Madisyn - Look 1 Day 2 - Back.png";
-import LongFront2 from "./Media/Look 2 Front .png";
-import LongBack2 from "./Media/Look 2 Back .png";
-import LongFront3 from "./Media/Maddy Front 1_.jpg";
-import LongBack3 from "./Media/Back Shot 1_.jpg";
-import LongFront4 from "./Media/MadisonLook2Front.png";
-import LongBack4 from "./Media/MadisonLook2Back.png";
-
-import MadisynVideo from "./Media/Caitlin_Lookbook2.mp4";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn - Look 1 Day 2 - Pose Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn - Look 1 Day 2 - Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 2 Front .png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 2 Back .png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Maddy Front 1_.jpg";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Back Shot 1_.jpg";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MadisonLook2Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MadisonLook2Back.png";
 
 
-import MadisynBanner from "../../assets/bannerImages/Madisyn-Banner.png";
+const MadisynBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn-Banner.png";
 import "./madisyn.scss";
 
 const MadisynMartinelli = () => {
@@ -42,8 +40,6 @@ const MadisynMartinelli = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = MadisynVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -52,7 +48,7 @@ const MadisynMartinelli = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc={videoSource} />
+      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

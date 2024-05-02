@@ -2,24 +2,23 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
-import Short1 from "./Media/LOOK 2 DETAIL .png";
-import Short2 from "./Media/LOOK 2 DETAIL .png"; //will get later, copy of long 1 
-import Short3 from "./Media/LOOK 3 DETAIL .png";
-import Short4 from "./Media/LOOK 1 DETAIL.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 DETAIL .png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 DETAIL .png"; //will get later, copy of long 1 
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 3 DETAIL .png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 1 DETAIL.png";
 
-import LongFront1 from "./Media/LOOK 2 SIDE:FRONT .png";
-import LongBack1 from "./Media/LOOK 2 BACK .png";
-import LongFront2 from "./Media/LOOK 2 SIDE:FRONT .png"; //will get later, copy of long 1 
-import LongBack2 from "./Media/LOOK 2 BACK .png";  //will get later, copy of long 1 
-import LongFront3 from "./Media/LOOK 3 FRONT.png";
-import LongBack3 from "./Media/LOOK 3 BACK .png";
-import LongFront4 from "./Media/Francesca - LOOK 1 FRONT - Version 2.png";
-import LongBack4 from "./Media/LOOK 1 BACK.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 SIDE:FRONT .png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 BACK .png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 SIDE:FRONT .png"; //will get later, copy of long 1 
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 2 BACK .png";  //will get later, copy of long 1 
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 3 FRONT.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 3 BACK .png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Francesca - LOOK 1 FRONT - Version 2.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 1 BACK.png";
 
 
-import FrancescaVideo from "./Media/Caitlin_Lookbook2.mp4";
 
-import FrancescaBanner from "../../assets/bannerImages/Francesca-Banner.png";
+const FrancescaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Francesca-Banner.png";
 import "./francesca.scss";
 
 const FrancescaMorabito = () => {
@@ -44,9 +43,6 @@ const FrancescaMorabito = () => {
   ];
 
 
-  const videoSource = FrancescaVideo;
-
-
   return (
     <div>
       <ImageCarousel
@@ -55,7 +51,7 @@ const FrancescaMorabito = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

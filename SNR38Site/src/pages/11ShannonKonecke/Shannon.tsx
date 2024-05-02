@@ -2,23 +2,21 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate1 from "../../components/PageTemplate1/TemplateOne";
 
-import Short1 from "./Media/Shannon - Look 3 - Detail.png";
-import Short2 from "./Media/Shannon - Look 1 - Detail.png";
-import Short3 from "./Media/Shannon - Look 4 - Detail.png";
-import Short4 from "./Media/Shannon - Look 2 - Pose 2.png"; //crop to get hand
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 3 - Detail.png";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 1 - Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 4 - Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Pose 2.png"; //crop to get hand
 
-import LongFront1 from "./Media/Shannon - Look 3 - Front.png";
-import LongBack1 from "./Media/Shannon - Look 3 - Side Pose.png";
-import LongFront2 from "./Media/Shannon - Look 1 - Front Pose.png";
-import LongBack2 from "./Media/Shannon - Look 1 - Side Pose.png";
-import LongFront3 from "./Media/Shannon - Look 4 - Front Pose.png";
-import LongBack3 from "./Media/Shannon - Look 4 - Back.png";
-import LongFront4 from "./Media/Shannon - Look 2 - Pose.png";
-import LongBack4 from "./Media/Shannon - Look 2 - Side.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 3 - Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 3 - Side Pose.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 1 - Front Pose.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 1 - Side Pose.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 4 - Front Pose.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 4 - Back.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Pose.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Side.png";
 
-import ShannonVideo from "./Media/Caitlin_Lookbook2.mp4";
-
-import ShannonBanner from "../../assets/bannerImages/Shannon-Banner.png";
+const ShannonBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon-Banner.png";
 import "./shannon.scss";
 
 const ShannonKonecke = () => {
@@ -41,7 +39,6 @@ const ShannonKonecke = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = ShannonVideo;
 
   return (
     <div>
@@ -51,7 +48,7 @@ const ShannonKonecke = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc={videoSource} />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

@@ -2,30 +2,28 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate2 from "../../components/PageTemplate2/TemplateTwo";
 
-import CaitlinBanner from "../../assets/bannerImages/Caitlin-Banner.png";
+const CaitlinBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin-Banner.png";
 
-import Short1 from "./Media/Caitlin - Look 5 - Detail (Lower).jpg";
-import Short2 from "./Media/Look2Detail.png";
-import Short3 from "./Media/Look3Detail.png";
-import Short4 from "./Media/Look4Detail.png";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin - Look 5 - Detail (Lower).jpg";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look2Detail.png";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look3Detail.png";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look4Detail.png";
 
-import LongFront1 from "./Media/Look2Front.png";
-// import LongBack1 from "./Media/JM another edit .png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look2Front.png";
+// const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/JM another edit .png";
 
-import LongFront2 from "./Media/Look4Front.png";
-// import LongBack2 from "./Media/Look4Side.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look4Front.png";
+// const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look4Side.png";
 
-import MediumFront1 from "./Media/Caitlin - Look 5 - Front.jpg";
-// import MediumBack1 from "./Media/Caitlin - Look 5 - Pose.jpg";
+const MediumFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin - Look 5 - Front.jpg";
+// const MediumBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin - Look 5 - Pose.jpg";
 
-import MediumFront2 from "./Media/JM EDIT.png";
-// import MediumBack2 from "./Media/Look1Side.png";
+const MediumFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/JM EDIT.png";
+// const MediumBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look1Side.png";
 
-import MediumFront3 from "./Media/Look3Front.png";
-// import MediumBack3 from "./Media/Look3Back.png";
+const MediumFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look3Front.png";
+// const MediumBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look3Back.png";
 
-
-import CaitlinVideo from "./Media/Caitlin_Lookbook2.mp4";
 
 import "./caitlin.scss";
 
@@ -46,8 +44,6 @@ const  CaitlinFracasso = () => {
     { src: MediumFront3, alt: "Medium3" }, //8
   ];
 
-  const videoSource = CaitlinVideo;
-
   return (
     <div>
       <ImageCarousel
@@ -56,7 +52,7 @@ const  CaitlinFracasso = () => {
         designerName={designerName}
       />
 
-      <PageTemplate2 images={imageList} videoSrc={videoSource} />
+      <PageTemplate2 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };

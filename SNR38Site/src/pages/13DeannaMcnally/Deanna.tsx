@@ -2,23 +2,22 @@
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import PageTemplate4 from "../../components/PageTemplate4/TemplateFour";
 
-import Short1 from "./Media/Deanna petite look 1 detail shot.jpg";
-import Short2 from "./Media/Deanna petite look 2 detail shot.jpg";
-import Short3 from "./Media/Deanna petite look 3 detail.jpg";
-import Short4 from "./Media/Deanna petite look 4 detail.jpg";
+const Short1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 1 detail shot.jpg";
+const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 2 detail shot.jpg";
+const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 3 detail.jpg";
+const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 4 detail.jpg";
 
-import LongFront1 from "./Media/Deanna petite look 1 front.jpg";
-import LongBack1 from "./Media/Deanna petite look 1 back.jpg";
-import LongFront2 from "./Media/Deanna petite look 2 front.jpg";
-import LongBack2 from "./Media/Deanna petite look 2 back.jpg";
-import LongFront3 from "./Media/Deanna petite look 3 front.jpg";
-import LongBack3 from "./Media/better.jpg";
-import LongFront4 from "./Media/Deanna petite look 4 front.jpg";
-import LongBack4 from "./Media/Deanna petite look 4 back.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 1 front.jpg";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 1 back.jpg";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 2 front.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 2 back.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 3 front.jpg";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/better.jpg";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 4 front.jpg";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna petite look 4 back.jpg";
 
-import DeannaVideo from "./Media/Caitlin_Lookbook2.mp4";
 
-import DeannaBanner from "../../assets/bannerImages/Deanna-Banner.png";
+const DeannaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna-Banner.png";
 import "./deanna.scss";
 
 const DeannaMcnally = () => {
@@ -41,8 +40,6 @@ const DeannaMcnally = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
-  const videoSource = DeannaVideo;
-
 
   return (
     <div>
@@ -52,7 +49,7 @@ const DeannaMcnally = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc={videoSource} />
+      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
     </div>
   );
 };
