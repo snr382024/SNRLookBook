@@ -48,7 +48,7 @@ const AnnikaGeissberger = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin_Lookbook2.mp4" />
+      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika_Lookbook.mp4" />
     </div>
   );
 };
