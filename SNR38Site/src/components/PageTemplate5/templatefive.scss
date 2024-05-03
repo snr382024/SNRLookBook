@@ -5,7 +5,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   margin-right: 2.5vh;
 
   @media (max-width: 950px) {
-    margin: 3.5vh;
+    margin: .5vh;
   }
 
   display: flex;
@@ -72,7 +72,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         .arrow-icon-wrapper {
           position: absolute;
           right: -15px;
-          bottom: -155px;
+          bottom: -165px;
           width: 35px;
           height: 35px;
           background-color: rgba(0, 0, 0, 0.6);
@@ -183,7 +183,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
 
   // Media query for smaller screens
 
-  @media (max-width: 950px) {
+  @media (max-width: 950px){
     flex-direction: column;
     align-items: center;
   
@@ -221,14 +221,69 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   
     .video-container {
       width: 100%; // Full width to match the layout
-      height: 40vh; // Fixed height for consistency
+      height: 10vh; // Fixed height for consistency
       margin-top: 2vh; // Add top margin for spacing
+      position: relative;
       display: flex;
       justify-content: center; // Center the video horizontally
       align-items: center; // Center the video vertically
   
       video {
-        width: 100%; // Ensure video fills the container
+        width: 50%; // Ensure video fills the container
+        height: 100%; // Maintain aspect ratio
+        object-fit: cover; // Ensure the video covers the full area without distortion
+        box-shadow: $background-shadow;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  
+    .image-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; // This helps in spacing out the columns
+  
+      .column-type1,
+      .column-type2 {
+        width: calc(50% - 2vw); // Adjust width calculation for better responsiveness
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1vw; // Add horizontal padding to create space between columns
+  
+        .square,
+        .rectangle {
+          img {
+            width: 100%; // Ensure images use the full width of their container
+            height: auto; // Maintain aspect ratio
+            box-shadow: $background-shadow;
+          }
+        }
+        
+        .rectangle {
+          width: 20vw;
+          height: 41vh; // Fixed height for rectangles
+          img {
+            height: 100%; // Ensure images use the full height of their container
+          }
+        }
+      }
+    }
+  
+    .video-container {
+      width: 100%; // Full width to match the layout
+      height: 10vh; // Fixed height for consistency
+      margin-top: 2vh; // Add top margin for spacing
+      position: relative;
+      display: flex;
+      justify-content: center; // Center the video horizontally
+      align-items: center; // Center the video vertically
+  
+      video {
+        width: 80%; // Ensure video fills the container
         height: 100%; // Maintain aspect ratio
         object-fit: cover; // Ensure the video covers the full area without distortion
         box-shadow: $background-shadow;

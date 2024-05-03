@@ -256,7 +256,7 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
               </div>
             </div>
             <div
-              className={`arrow-icon-wrapper ${isVisible[1] ? "visible" : ""}`}
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
             >
               <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
@@ -286,7 +286,7 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
               </div>
             </div>
             <div
-              className={`arrow-icon-wrapper ${isVisible[2] ? "visible" : ""}`}
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
             >
               <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>
@@ -310,7 +310,7 @@ const TemplateThree: React.FC<TemplateThreeProps> = ({ images, videoSrc }) => {
               </div>
             </div>
             <div
-              className={`arrow-icon-wrapper ${isVisible[3] ? "visible" : ""}`}
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
             >
               <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
             </div>

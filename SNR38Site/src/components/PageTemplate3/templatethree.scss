@@ -73,6 +73,11 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
           opacity: 0; // start hidden
           visibility: hidden; // start fully hidden
           transition: opacity 0.5s ease, visibility 0.5s ease;
+
+          @media (max-width: 950px) {
+            width: 15px;
+            height: 15px;
+          }
         
           &.visible {
             opacity: 1;
@@ -84,6 +89,11 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
         .arrow-icon {
           width: 25px; // Independently adjustable size of the arrow
           height: 25px; // Independently adjustable size of the arrow
+
+          @media (max-width: 950px) {
+            width: 12px;
+            height: 12px;
+          }
         }
         img {
           width: 12vw;
@@ -144,7 +154,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
 
   .video-container {
     flex: 2; 
-    max-height: 98.5vh;
+    max-height: 98.4vh;
     margin-bottom: 6vh; // Consistent bottom margin outside of media query
     margin-left: 1vw;
     margin-right: 1vw;
@@ -217,9 +227,11 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       display: flex; // Enables flexbox
 
       width: 100%; // Adjust the size as needed
-      height: 40vh;
-      margin-bottom: 1vh;
-      margin-top: 3vh;
+      height: 50vh;
+      margin-bottom: -10vh;
+      @media (max-width: 414px){
+        margin-right: 3px;
+      }
 
       video {
         width: auto;

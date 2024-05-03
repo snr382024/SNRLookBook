@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import arrowIcon from "../../assets/icons/arrow-right-white.png";
+
 import "./templateone.scss";
 
 type TemplateOneProps = {
@@ -9,6 +11,38 @@ type TemplateOneProps = {
 const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
   const [isFlipped, setIsFlipped] = useState(new Array(images.length).fill(false));
   const [showOverlay, setShowOverlay] = useState(new Array(images.length).fill(false));
+  const [isVisible, setIsVisible] = useState(
+    new Array(images.length).fill(false)
+  );
+  const fadeOutTimers = useRef<number[]>([]);
+  const refs = images.map(() => useRef<HTMLDivElement>(null));
+
+
+
+  const handleVisibilityChange = (index: number, visible: boolean) => {
+    clearTimeout(fadeOutTimers.current[index]);
+    if (visible) {
+      setIsVisible((vis) => {
+        const newVis = [...vis];
+        newVis[index] = true;
+        return newVis;
+      });
+      // Set timeout to fade out
+      fadeOutTimers.current[index] = window.setTimeout(() => {
+        setIsVisible((vis) => {
+          const newVis = [...vis];
+          newVis[index] = false;
+          return newVis;
+        });
+      }, 5000);
+    } else {
+      setIsVisible((vis) => {
+        const newVis = [...vis];
+        newVis[index] = false;
+        return newVis;
+      });
+    }
+  };
 
   // Scroll event handler for flipping and overlay
   useEffect(() => {
@@ -55,6 +89,35 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
     setShowOverlay(newOverlay);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = refs.findIndex((ref) => ref.current === entry.target);
+          if (index !== -1) {
+            handleVisibilityChange(index, entry.isIntersecting);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    refs.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      refs.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+      fadeOutTimers.current.forEach(clearTimeout);
+    };
+  }, []);
+
   return (
     <div className="template-one-container">
       <div className="image-wrapper">
@@ -77,10 +140,15 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 {showOverlay[0] && <div className="overlay">CLICK TO FLIP</div>}
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(1)}>
+          <div className="rectangle" ref={refs[0]} onClick={() => handleFlip(1)}>
             <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -91,6 +159,11 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
           <div className="square">
             <img src={images[1].src} alt={images[1].alt} />
@@ -100,7 +173,7 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
           <div className="square">
             <img src={images[2].src} alt={images[2].alt} />
           </div>
-          <div className="rectangle" onClick={() => handleFlip(2)}>
+          <div className="rectangle" ref={refs[0]} onClick={() => handleFlip(2)}>
             <div className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -111,10 +184,15 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
         </div>
         <div className="column-type2">
-          <div className="rectangle" onClick={() => handleFlip(3)}>
+          <div className="rectangle" ref={refs[0]} onClick={() => handleFlip(3)}>
             <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
               <div className="flipper">
                 <div className="front">
@@ -125,7 +203,11 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
                 </div>
               </div>
             </div>
-
+            <div
+              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
+            >
+              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+            </div>
           </div>
           <div className="square">
             <img src={images[3].src} alt={images[3].alt} />
