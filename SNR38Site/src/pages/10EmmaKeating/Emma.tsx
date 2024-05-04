@@ -39,6 +39,11 @@ const EmmaKeating = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "ALYSSA JONES": "/alyssa",
+    "SHANNON KONECKE": "/shannon",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -47,7 +52,7 @@ const EmmaKeating = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma_Lookbook.mp4" />
+      <PageTemplate4 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma_Lookbook.mp4" />
     </div>
   );
 };

@@ -40,6 +40,11 @@ const AliahChammoro = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "OLIVIA CAVALLERO": "/olivia",
+    "GAVIN COOPER": "/gavin",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -48,7 +53,7 @@ const AliahChammoro = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah_Lookbook.mp4" />
+      <PageTemplate3 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah_Lookbook.mp4" />
     </div>
   );
 };

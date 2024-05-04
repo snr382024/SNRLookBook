@@ -41,6 +41,10 @@ const DavidRoot = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "EVA REED": "/eva",
+    "NATALIE SWEENEY": "/natalie",
+  };
 
   return (
     <div>
@@ -50,7 +54,7 @@ const DavidRoot = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David_Lookbook.mp4" />
+      <PageTemplate4 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David_Lookbook.mp4" />
     </div>
   );
 };

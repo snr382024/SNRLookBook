@@ -40,6 +40,10 @@ const DeannaMcnally = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "MADISYN MARTINELLI": "/madisyn",
+    "FRANCESCA MORABITO": "/francesca",
+  };
 
   return (
     <div>
@@ -49,7 +53,7 @@ const DeannaMcnally = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna_Lookbook.mp4" />
+      <PageTemplate4 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna_Lookbook.mp4" />
     </div>
   );
 };

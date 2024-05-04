@@ -346,3 +346,37 @@ $background-shadow: 0 2px 14px 0 rgba(0,0,0,0.3);
     }
   }
 }
+
+.page-navigator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust margin as needed */
+  margin-bottom: 30px;
+  @media(max-width: 950px){
+    margin-top: 5px;
+  }
+}
+
+.designer-link {
+  color: black;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 20px; /* Adjust font size as needed */
+  margin: 0 50px; /* Adjust spacing between links */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.1); /* Scale up the link slightly on hover */
+  }
+  @media(max-width: 950px){
+    font-size: 12px;
+    margin: 0 20px; /* Adjust spacing between links */
+
+  }
+}
+.designer-link:first-child::before {
+  content: "< ";
+}
+
+.designer-link:last-child::after {
+  content: " >";
+}

@@ -40,6 +40,11 @@ const MadisynMartinelli = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "SHANNON KONECKE": "/shannon",
+    "DEANNA MCNALLY": "/deanna",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -48,7 +53,7 @@ const MadisynMartinelli = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn_Lookbook.mp4" />
+      <PageTemplate3 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn_Lookbook.mp4" />
     </div>
   );
 };

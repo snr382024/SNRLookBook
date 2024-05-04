@@ -39,6 +39,10 @@ const ShannonKonecke = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "EMMA KEATING": "/emma",
+    "MADISYN MARTINELLI": "/madisyn",
+  };
 
   return (
     <div>
@@ -48,7 +52,7 @@ const ShannonKonecke = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon_Lookbook.mp4" />
+      <PageTemplate1 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon_Lookbook.mp4" />
     </div>
   );
 };

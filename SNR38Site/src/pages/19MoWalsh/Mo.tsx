@@ -39,6 +39,11 @@ const MoWalsh = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "NICOLE TASCA": "/nicole",
+    "SIERRA WEISSNER": "/sierra",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -47,7 +52,7 @@ const MoWalsh = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Mo_Lookbook.mp4" />
+      <PageTemplate3 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Mo_Lookbook.mp4" />
     </div>
   );
 };

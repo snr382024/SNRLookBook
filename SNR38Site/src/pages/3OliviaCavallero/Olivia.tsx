@@ -42,6 +42,11 @@ const  OliviaCavallero = () => {
     { src: OliviaLongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "SHIRELL BATTLE": "/shirell",
+    "ALIAH CHAMMORO": "/aliah",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -50,7 +55,7 @@ const  OliviaCavallero = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Olivia_Lookbook.mp4" />
+      <PageTemplate1 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Olivia_Lookbook.mp4" />
     </div>
   );
 };

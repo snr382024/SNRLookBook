@@ -40,6 +40,11 @@ const AnnikaGeissberger = () => {
   ];
 
 
+  const nextName = {
+    "CAITLIN FRACASSO": "/caitlin",
+    "ALYSSA JONES": "/alyssa",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -48,7 +53,7 @@ const AnnikaGeissberger = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika_Lookbook.mp4" />
+      <PageTemplate1 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika_Lookbook.mp4" />
     </div>
   );
 };

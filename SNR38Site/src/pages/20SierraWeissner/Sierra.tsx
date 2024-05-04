@@ -41,6 +41,12 @@ const SierraWeissner = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "MO WALSH": "/mo",
+    "SHIRELL BATTLE ": "/shirell"
+  };
+
+
 
   return (
     <div>
@@ -50,7 +56,7 @@ const SierraWeissner = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sierra_Lookbook.mp4" />
+      <PageTemplate4 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sierra_Lookbook.mp4" />
     </div>
   );
 };

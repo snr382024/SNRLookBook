@@ -53,6 +53,11 @@ const  CaitlinFracasso = () => {
 
   ];
 
+  const nextName = {
+    "SERA CRISTIN FERRANTE": "/sera",
+    "ANNIKA GEISSBERGER": "/annika",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -61,7 +66,7 @@ const  CaitlinFracasso = () => {
         designerName={designerName}
       />
 
-      <PageTemplate2 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Cailtin_Lookbook.mp4" />
+      <PageTemplate2 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Cailtin_Lookbook.mp4" />
     </div>
   );
 };

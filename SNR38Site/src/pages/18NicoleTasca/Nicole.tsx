@@ -39,7 +39,10 @@ const NicoleTasca = () => {
     { src: LongFront4, alt: "LongFront4" },
     { src: LongBack4, alt: "LongBack4" },
   ];
-
+  const nextName = {
+    "NATALIE SWEENEY": "/natalie",
+    "MO WALSH": "/mo",
+  };
 
   return (
     <div>
@@ -49,7 +52,7 @@ const NicoleTasca = () => {
         designerName={designerName}
       />
 
-      <PageTemplate1 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Nicole_Lookbook.mp4" />
+      <PageTemplate1 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Nicole_Lookbook.mp4" />
     </div>
   );
 };

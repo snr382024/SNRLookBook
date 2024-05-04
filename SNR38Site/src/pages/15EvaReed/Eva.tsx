@@ -40,6 +40,10 @@ const EvaReed = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "FRANCESCA MORABITO": "/francesca",
+    "DAVID ROOT": "/david",
+  };
 
   return (
     <div>
@@ -49,7 +53,7 @@ const EvaReed = () => {
         designerName={designerName}
       />
 
-      <PageTemplate3 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Eva_Lookbook.mp4" />
+      <PageTemplate3 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Eva_Lookbook.mp4" />
     </div>
   );
 };

@@ -39,6 +39,11 @@ const SeraCristinFerrante = () => {
     { src: LongBack4, alt: "LongBack4" },
   ];
 
+  const nextName = {
+    "GAVIN COOPER": "/gavin",
+    "CAITLIN FRACASSO": "/caitlin",
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -47,7 +52,7 @@ const SeraCristinFerrante = () => {
         designerName={designerName}
       />
 
-      <PageTemplate4 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sera_Lookbook.mp4" />
+      <PageTemplate4 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sera_Lookbook.mp4" />
     </div>
   );
 };
