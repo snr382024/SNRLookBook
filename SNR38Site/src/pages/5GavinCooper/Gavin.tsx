@@ -36,6 +36,11 @@ const GavinCooper = () => {
     { src: LongBack3, alt: "LongBack3" },
   ];
 
+  const nextName = {
+    "ALIAH CHAMMORO": "/aliah",
+    "SERA CRISTIN FERRANTE": "/sera"
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -44,7 +49,7 @@ const GavinCooper = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Gavin_Lookbook.mp4" />
+      <PageTemplate5 images={imageList} nextName={nextName}  videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Gavin_Lookbook.mp4" />
     </div>
   );
 };

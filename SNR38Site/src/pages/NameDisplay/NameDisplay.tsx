@@ -3,13 +3,6 @@ import noImage from "../../assets/no-image.avif";
 import "./namedisplay.scss";
 import { Link } from "react-router-dom"; // Import Link component from react-router-dom
 
-
-interface Designer {
-  id: string;
-  name: string;
-  imageUrl: string;
-}
-
 const NameDisplay: React.FC = () => {
   // State to manage visibility of each card
   const [visibleCards, setVisibleCards] = useState<{ [key: number]: boolean }>({});

@@ -38,6 +38,10 @@ const NatalieSweeney = () => {
 
   ];
 
+  const nextName = {
+    "DAVID ROOT": "/david",
+    "NICOLE TASCA": "/nicole"
+  };
 
 
   return (
@@ -48,7 +52,7 @@ const NatalieSweeney = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie_Lookbook.mp4" />
+      <PageTemplate5 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie_Lookbook.mp4" />
     </div>
   );
 };
