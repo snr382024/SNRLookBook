@@ -37,6 +37,11 @@ const ShirellBattle = () => {
     { src: LongBack3, alt: "LongBack3" },
   ];
 
+  const nextName = {
+    "SIERRA WEISSNER": "/sierra",
+    "OLIVIA CAVALLERO": "/olivia"
+  };
+
   return (
     <div>
       <ImageCarousel
@@ -45,7 +50,7 @@ const ShirellBattle = () => {
         designerName={designerName}
       />
 
-      <PageTemplate5 images={imageList} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell_Lookbook.mp4" />
+      <PageTemplate5 images={imageList} nextName={nextName} videoSrc="https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell_Lookbook.mp4" />
     </div>
   );
 };

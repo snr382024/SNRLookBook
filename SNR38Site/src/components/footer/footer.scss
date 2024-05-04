@@ -1,0 +1,37 @@
+.footer {
+    background-color: #ececeb;
+    color: black;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    text-align: center; // Center align everything within the footer
+  
+    .social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; // Provides spacing between icons and the footer text
+  
+      a {
+        margin: 0 10px; // Space out the icons evenly
+      }
+  
+      .social-icon {
+        width: 50px; // Set width for icons
+        height: auto; // Maintain aspect ratio of icons
+        transition: transform 0.3s;
+        @media(max-width: 950px){
+          width: 25px;
+        }
+  
+        &:hover {
+          transform: scale(1.1); // Enlarge icons slightly on hover
+        }
+      }
+    }
+  
+    .footer-bottom {
+      font-size: 0.8em;
+      margin-top: 20px; // Space between icons and footer bottom text
+    }
+  }
+  

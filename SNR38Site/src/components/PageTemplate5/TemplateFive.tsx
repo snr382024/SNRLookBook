@@ -1,19 +1,23 @@
 // TemaplteFive.tsx
 
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import arrowIcon from "../../assets/icons/arrow-right-white.png";
-import ImageCarousel from '../../components/imageCarouselY/imageCarouselY'; // Update the path as necessary
-
+import ImageCarousel from "../../components/imageCarouselY/imageCarouselY"; // Update the path as necessary
 
 import "./templatefive.scss";
 
 type TemplateFiveProps = {
   images: { src: string; alt: string }[];
+  nextName: { [key: string]: string };
   videoSrc: string;
 };
 
-const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
-  
+const TemplateFive: React.FC<TemplateFiveProps> = ({
+  images,
+  nextName,
+  videoSrc,
+}) => {
   const [isFlipped, setIsFlipped] = useState(
     new Array(images.length).fill(false)
   );
@@ -28,7 +32,7 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
     { src: images[0].src, alt: "image 1" },
     { src: images[1].src, alt: "image 2" },
     { src: images[2].src, alt: "image 3" },
-    { src: images[3].src, alt: "image 4" }
+    { src: images[3].src, alt: "image 4" },
   ];
 
   const handleVisibilityChange = (index: number, visible: boolean) => {
@@ -103,90 +107,112 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
   };
 
   const desktopTemplate = (
-    <div className="template-five-container">
-      <div className="image-wrapper">
-        <div className="column-type1">
-          <div
-            className="rectangle"
-            ref={refs[0]}
-            onClick={() => handleFlip(0)}
-          >
-            <div className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}>
-              <div className="flipper">
-                <div className="front">
-                  <img src={images[4].src} alt={images[4].alt} />
-                </div>
-                <div className="back">
-                  <img src={images[5].src} alt={images[5].alt} />
+    <>
+      <div className="template-five-container">
+        <div className="image-wrapper">
+          <div className="column-type1">
+            <div
+              className="rectangle"
+              ref={refs[0]}
+              onClick={() => handleFlip(0)}
+            >
+              <div
+                className={`flip-container ${isFlipped[0] ? "flipped" : ""}`}
+              >
+                <div className="flipper">
+                  <div className="front">
+                    <img src={images[4].src} alt={images[4].alt} />
+                  </div>
+                  <div className="back">
+                    <img src={images[5].src} alt={images[5].alt} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className={`arrow-icon-wrapper ${isVisible[0] ? "visible" : ""}`}
-            >
-              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              <div
+                className={`arrow-icon-wrapper ${
+                  isVisible[0] ? "visible" : ""
+                }`}
+              >
+                <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="video-container">
-          <video src={videoSrc} loop autoPlay muted playsInline />
-        </div>
-        <div className="column-type2">
-          <div
-            className="rectangle"
-            ref={refs[1]}
-            onClick={() => handleFlip(1)}
-          >
-            {" "}
-            <div className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}>
-              <div className="flipper">
-                <div className="front">
-                  <img src={images[6].src} alt={images[6].alt} />
-                </div>
-                <div className="back">
-                  <img src={images[7].src} alt={images[7].alt} />
+          <div className="video-container">
+            <video src={videoSrc} loop autoPlay muted playsInline />
+          </div>
+          <div className="column-type2">
+            <div
+              className="rectangle"
+              ref={refs[1]}
+              onClick={() => handleFlip(1)}
+            >
+              {" "}
+              <div
+                className={`flip-container ${isFlipped[1] ? "flipped" : ""}`}
+              >
+                <div className="flipper">
+                  <div className="front">
+                    <img src={images[6].src} alt={images[6].alt} />
+                  </div>
+                  <div className="back">
+                    <img src={images[7].src} alt={images[7].alt} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className={`arrow-icon-wrapper ${isVisible[1] ? "visible" : ""}`}
-            >
-              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              <div
+                className={`arrow-icon-wrapper ${
+                  isVisible[1] ? "visible" : ""
+                }`}
+              >
+                <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="column-type3">
-          <ImageCarousel images={Squareimages} />
-        </div>
-        <div className="column-type2">
-          <div
-            className="rectangle"
-            ref={refs[3]}
-            onClick={() => handleFlip(3)}
-          >
-            {" "}
-            <div className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}>
-              <div className="flipper">
-                <div className="front">
-                  <img src={images[8].src} alt={images[8].alt} />
-                </div>
-                <div className="back">
-                  <img src={images[9].src} alt={images[9].alt} />
+          <div className="column-type3">
+            <ImageCarousel images={Squareimages} />
+          </div>
+          <div className="column-type2">
+            <div
+              className="rectangle"
+              ref={refs[3]}
+              onClick={() => handleFlip(3)}
+            >
+              {" "}
+              <div
+                className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}
+              >
+                <div className="flipper">
+                  <div className="front">
+                    <img src={images[8].src} alt={images[8].alt} />
+                  </div>
+                  <div className="back">
+                    <img src={images[9].src} alt={images[9].alt} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className={`arrow-icon-wrapper ${isVisible[3] ? "visible" : ""}`}
-            >
-              <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              <div
+                className={`arrow-icon-wrapper ${
+                  isVisible[3] ? "visible" : ""
+                }`}
+              >
+                <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="page-navigator">
+        {Object.keys(nextName).map((name, index) => (
+          <Link key={index} to={nextName[name]} className="designer-link">
+            {index === 0 ? `${name}` : `${name} `}
+          </Link>
+        ))}
+      </div>
+    </>
   );
 
   const mobileTemplate = (
+    <>
     <div className="template-five-container">
       <div className="image-wrapper">
         <div className="column-type1">
@@ -269,6 +295,14 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({ images, videoSrc }) => {
         <video src={videoSrc} loop autoPlay muted playsInline />
       </div>
     </div>
+          <div className="page-navigator">
+          {Object.keys(nextName).map((name, index) => (
+            <Link key={index} to={nextName[name]} className="designer-link">
+              {index === 0 ? `${name}` : `${name} `}
+            </Link>
+          ))}
+        </div>
+      </>
   );
 
   return isMobile ? mobileTemplate : desktopTemplate;

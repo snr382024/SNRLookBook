@@ -181,7 +181,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
     }
   }
 
-  // Media query for smaller screens
+  // Media query for smaller screen
 
   @media (max-width: 950px){
     flex-direction: column;
@@ -227,12 +227,17 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center; // Center the video horizontally
       align-items: center; // Center the video vertically
+      background-color: #FAFAFA;
+      box-shadow: none;
+
+
   
       video {
         width: 50%; // Ensure video fills the container
         height: 100%; // Maintain aspect ratio
         object-fit: cover; // Ensure the video covers the full area without distortion
-        box-shadow: $background-shadow;
+        box-shadow: none;
+
       }
     }
   }
@@ -281,14 +286,52 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       display: flex;
       justify-content: center; // Center the video horizontally
       align-items: center; // Center the video vertically
+      background-color: #FAFAFA;
+      box-shadow: none;
   
       video {
         width: 80%; // Ensure video fills the container
         height: 100%; // Maintain aspect ratio
         object-fit: cover; // Ensure the video covers the full area without distortion
-        box-shadow: $background-shadow;
+        box-shadow: none;
+
       }
     }
   }
   
 }
+
+.page-navigator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust margin as needed */
+  margin-bottom: 30px;
+  @media(max-width: 950px){
+    margin-top: 5px;
+  }
+}
+
+.designer-link {
+  color: black;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 20px; /* Adjust font size as needed */
+  margin: 0 50px; /* Adjust spacing between links */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.1); /* Scale up the link slightly on hover */
+  }
+  @media(max-width: 950px){
+    font-size: 12px;
+    margin: 0 20px; /* Adjust spacing between links */
+
+  }
+}
+.designer-link:first-child::before {
+  content: "< ";
+}
+
+.designer-link:last-child::after {
+  content: " >";
+}
+

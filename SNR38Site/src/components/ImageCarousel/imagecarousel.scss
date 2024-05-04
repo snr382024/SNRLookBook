@@ -1,22 +1,102 @@
-//imagecarousel.scss
-
+body, html {
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  max-width: 100vw; /* Ensures the viewport width doesn't exceed the screen width */
+  position: relative; /* Ensures positioning context */
+}
 
 
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 100vw; // Ensures the container doesn't exceed the viewport width
+  max-width: 100vw;
   font-family: "Arial Black", Arial, sans-serif;
-  @media (max-width: 480px) {
-    height: 12vh;
+}
 
+.hamburger-icon,
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: opacity 0.3s ease; /* Transition for opacity change */
+  opacity: 0; /* Default to invisible */
+}
+
+.hamburger-icon.visible,
+.close-icon.visible {
+  opacity: 1; /* Make visible */
+}
+
+.menu-overlay a {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits the white color from parent, if set */
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease, visibility 0s linear 0.3s; /* Add visibility to the transition */
+  transform: translateX(100%);
+  visibility: hidden; /* Start as hidden */
+
+  h1 {
+    color: white; /* Ensures text color is white */
+    font-size: 15px; /* Adjusts font size to a smaller scale */
+    margin-top: 18.9px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for transform effect */
+    cursor: pointer; /* Indicates the item is clickable */
   }
+  h1:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
+    color: #007BFF; /* Changes color to a nice blue on hover */
+  }
+
+}
+@media (max-width: 950px) {
+  .menu-overlay {
+    width: 60%; /* Adjust width for mobile devices */
+    padding: 10px; /* Reduce padding */
+    /* No need to adjust transform here; it should still start offscreen */
+  }
+
+  .menu-overlay h1 {
+    font-size: 13px; /* Adjust font size for mobile */
+    margin-top: 16px; /* Adjust margin */
+  }
+}
+
+.menu-overlay.visible {
+  transform: translateX(0); /* Move into view */
+  visibility: visible; /* Make visible */
+  transition-delay: 0s; /* Apply transition delay as 0s when becoming visible */
 }
 
 .carousel-slider {
   display: flex;
   position: relative;
   left: 0;
+  width: 100%; /* Ensure it covers the container width */
+}
+
+.carousel-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* Semi-transparent black overlay */
+  z-index: 1; /* Below the text but above the images */
 }
 
 .carousel-image {
@@ -24,22 +104,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  @media (max-width: 480px) {
-    height: 12vh;
-  }
 }
-
-.carousel-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); 
-  pointer-events: none; 
-  z-index: 1; 
-}
-
 
 .carousel-text {
   position: absolute;
@@ -48,27 +113,23 @@
   transform: translate(-50%, -50%);
   color: white;
   z-index: 2;
+  font-size: 30px;
   text-align: center;
-  width: 80%; // Adjust based on how much width the text should occupy
-  max-width: 500px; // Prevents the text box from becoming too wide on large screens
+  width: 80%;
+  max-width: 500px;
   padding: 10px;
-
-  p {
-    font-size: calc(1em + 1vw); // Example of making font size responsive
-    margin: 0;
-    white-space: nowrap; // Prevents the text from breaking into multiple lines
-    overflow: hidden; // Ensures that overflow text is not visible
+  @media(max-width: 750px){
+    font-size: 12px;
   }
 }
+
 
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      -50%
-    ); // Moves the slider to the left, to the start of the second set of images
+    transform: translateX(-50%);
   }
 }
 

@@ -1,105 +1,75 @@
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.name-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* This should create three columns */
+  justify-content: center;
+  align-items: start;
+  gap: 4rem; /* Adjust the gap to ensure proper spacing */
+  padding: 1rem;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-left: 2vw;
+  width: 100%;
 }
 
-.name-display {
-  font-family: "Arial Black", Arial, sans-serif;
-  width: 100%;
-  margin: 0;
-  padding: 20px;
-  padding-top: 50px;
-  background-color: #FAFAFA;
-  color: black;
+.name-row {
+  width: 100%; /* Ensure full width to maintain grid structure */
+}
+
+.designer-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .name-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; // Allows names to wrap to the next line on small screens
-    margin-bottom: 30px;
-    opacity: 0; // Start with the rows invisible
-    transform: translateY(20px); // Start translated down
-    transition: opacity .8s ease-out, transform .8s ease-out;
-    will-change: opacity, transform;
-
-
-    // Stagger the animation of each row
-    &:nth-child(1) { animation-delay: 0.8s; }
-    &:nth-child(2) { animation-delay: 1.4s; }
-    &:nth-child(3) { animation-delay: 1.8s; }
-    &:nth-child(4) { animation-delay: 2.2s; }
-    &:nth-child(5) { animation-delay: 2.6s; }
-    &:nth-child(6) { animation-delay: 3.0s; }
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    &.row-4 .name-tag {
-      flex-basis: calc(25% - 300px); // Adjust the width for 4 items per row
-      margin: 0 80px;
-    }
-    &.row-3 .name-tag {
-      flex-basis: calc(33.333% - 155px); // Adjust the width for 3 items per row
-      margin: 0 40px;
-    }
-    &.row-2 .name-tag {
-      flex-basis: calc(50% - 550px); // Adjust the width for 2 items per row
-      margin: 0 220px;
-    }
-  }
-
-  .name-tag {
-    cursor: pointer;
-    white-space: nowrap;
-    font-size: 16px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: calc(100% / 4 - 24px); // Adjust the width for 4 items per row
-    text-align: center;
-    margin: 10px 12px;
-    box-sizing: border-box;
-
-    &:hover {
-      color: #007bff;
-    }
-  }
+  width: 85%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;  // Start invisible
+  transform: translateY(50px);  // Start slightly below the normal position
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  cursor: pointer; /* Indicates the card is clickable */
 }
 
-.name-row.slide-in {
-  animation: slide-up 1s ease forwards;
+.designer-card:hover .designer-headshot {
+  transform: scale(1.05); /* Zooms in the image slightly */
+  transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+.designer-card.slide-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-// Responsive adjustments
-@media (max-width: 768px) {
-  .name-display .name-row {
-    justify-content: center;
-    &.row-4 .name-tag,
-    &.row-3 .name-tag,
-    &.row-2 .name-tag {
-      flex-basis: calc(50% - 12px); // Adjust for 2 items per row
-      margin: 10px 6px; // Reduced margin for tighter fitting
-    }
+.designer-headshot {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Ensures smooth zoom effect */
+}
+
+.designer-name {
+  font-family: "Arial Black", Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .designer-name {
+    font-size: 12px;
+
   }
-}
+  .designer-headshot {
+    width: 110%;
 
-@media (max-width: 480px) {
-  .name-display .name-row {
-    &.row-4 .name-tag,
-    &.row-3 .name-tag,
-    &.row-2 .name-tag {
-      flex-basis: calc(50% - 12px); // Maintain two columns on small screens
-      margin: 10px 6px; // Consistent margin for alignment
-    }
+  }
+  .designer-card {
+    width: 100%;
+  }
+  .name-display {
+    margin-left: .5vw;
+    margin-right: 5vw;
+    grid-template-columns: repeat(2, 1fr); /* Adjusts to two columns below 950px */
   }
 }

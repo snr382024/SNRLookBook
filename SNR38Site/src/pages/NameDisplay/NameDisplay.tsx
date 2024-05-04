@@ -1,77 +1,146 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import noImage from "../../assets/no-image.avif";
 import "./namedisplay.scss";
+import { Link } from "react-router-dom"; // Import Link component from react-router-dom
+
+
+interface Designer {
+  id: string;
+  name: string;
+  imageUrl: string;
+}
 
 const NameDisplay: React.FC = () => {
-  const [playAnimation, setPlayAnimation] = useState(false);
+  // State to manage visibility of each card
+  const [visibleCards, setVisibleCards] = useState<{ [key: number]: boolean }>({});
+
+  // Refs to hold references to each card element
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const nameDisplayPosition = document
-        .querySelector(".name-display")
-        ?.getBoundingClientRect().top;
       const screenPosition = window.innerHeight;
-
-      if (nameDisplayPosition && nameDisplayPosition < screenPosition) {
-        setPlayAnimation(true);
-        // Remove the event listener once the animation plays
-        window.removeEventListener("scroll", handleScroll);
-      }
+      cardRefs.current.forEach((card, index) => {
+        if (card && card.getBoundingClientRect().top < screenPosition) {
+          setVisibleCards(prev => ({ ...prev, [index]: true }));
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const namesRows = [
+  const designers = [
     {
-      names: [
-        "SHIRELL BATTLE",
-        "OLIVIA CAVALLERO",
-        "ALIAH CHAMORRO",
-      ],
-      className: "row-4",
+      id: "shirell",
+      name: "SHIRELL BATTLE",
+      imageUrl: noImage,
     },
     {
-      names: ["GAVIN COOPER", "SERA CRISTIN FERRANTE", "CAITLIN FRACASSO"],
-      className: "row-3",
+      id: "olivia",
+      name: "OLIVIA CAVALLERO",
+      imageUrl: noImage,
     },
     {
-      names: [
-        "ANNIKA GEISSBERGER",
-        "ALYSSA JONES",
-        "EMMA KEATING",
-        "SHANNON KONECKE",
-      ],
-      className: "row-4",
+      id: "aliah",
+      name: "ALIAH CHAMORRO",
+      imageUrl: noImage,
     },
     {
-      names: ["MADISYN MARTINELLI", "DEANNA MCNALLY", "FRANCESCA MORABITO"],
-      className: "row-3",
+      id: "gavin",
+      name: "GAVIN COOPER",
+      imageUrl: noImage,
     },
     {
-      names: ["EVA REED", "DAVID ROOT", "NATALIE SWEENEY", "NICOLE TASCA"],
-      className: "row-4",
+      id: "sera",
+      name: "SERA CRISTIN FERRANTE",
+      imageUrl: noImage,
     },
-    { names: ["MO WALSH", "SIERRA WIESSNER"], className: "row-2" },
+    {
+      id: "caitlin",
+      name: "CAITLIN FRACASSO",
+      imageUrl: noImage,
+    },
+    {
+      id: "annika",
+      name: "ANNIKA GEISSBERGER",
+      imageUrl: noImage,
+    },
+    {
+      id: "alyssa",
+      name: "ALYSSA JONES",
+      imageUrl: noImage,
+    },
+    {
+      id: "emma",
+      name: "EMMA KEATING",
+      imageUrl: noImage,
+    },
+    {
+      id: "shannon",
+      name: "SHANNON KONECKE",
+      imageUrl: noImage,
+    },
+    {
+      id: "madisyn",
+      name: "MADISYN MARTINELLI",
+      imageUrl: noImage,
+    },
+    {
+      id: "deanna",
+      name: "DEANNA MCNALLY",
+      imageUrl: noImage,
+    },
+    {
+      id: "francesca",
+      name: "FRANCESCA MORABITO",
+      imageUrl: noImage,
+    },
+    {
+      id: "eva",
+      name: "EVA REED",
+      imageUrl: noImage,
+    },
+    {
+      id: "david",
+      name: "DAVID ROOT",
+      imageUrl: noImage,
+    },
+    {
+      id: "natalie",
+      name: "NATALIE SWEENEY",
+      imageUrl: noImage,
+    },
+    {
+      id: "nicole",
+      name: "NICOLE TASCA",
+      imageUrl: noImage,
+    },
+    {
+      id: "mo",
+      name: "MO WALSH",
+      imageUrl: noImage,
+    },
+    {
+      id: "sierra",
+      name: "SIERRA WEISSNER",
+      imageUrl: noImage,
+    }
   ];
 
   return (
     <div className="name-display">
-      {namesRows.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className={`name-row ${row.className} ${
-            playAnimation ? "slide-in" : ""
-          }`}
-        >
-          {row.names.map((name, nameIndex) => (
-            <div key={nameIndex} className="name-tag">
-              {name}
-            </div>
-          ))}
-        </div>
+      {designers.map((designer, index) => (
+        <Link to={`/${designer.id}`} key={designer.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div
+            ref={el => cardRefs.current[index] = el}
+            className={`designer-card ${visibleCards[index] ? "slide-in" : ""}`}
+          >
+            <img src={designer.imageUrl || noImage} alt={designer.name} className="designer-headshot" />
+            <div className="designer-name">{designer.name}</div>
+          </div>
+        </Link>
       ))}
     </div>
   );

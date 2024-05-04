@@ -217,7 +217,9 @@ const TemplateOne: React.FC<TemplateOneProps> = ({ images, videoSrc }) => {
       <div className="video-container">
         <video src={videoSrc} loop autoPlay muted playsInline />
       </div>
+
     </div>
+    
   );
 };
 
