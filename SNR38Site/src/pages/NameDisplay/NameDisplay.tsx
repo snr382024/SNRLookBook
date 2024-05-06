@@ -3,6 +3,30 @@ import noImage from "../../assets/no-image.avif";
 import "./namedisplay.scss";
 import { Link } from "react-router-dom"; // Import Link component from react-router-dom
 
+const Aliah = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Aliah.jpg"
+const Alyssa = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Alyssa.jpg"
+const Annika = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika.jpg"
+const Caitlin = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Caitlin.jpg"
+const David = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David.jpg"
+const Deanna = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Deanna.jpg"
+const Emma = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma.jpg"
+const Eva = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Eva.jpg"
+const Francesca = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Francesca.jpg"
+const Gavin = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Gavin.jpg"
+const Madisyn = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Madisyn.jpg"
+const Mo = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Mo.jpg"
+const Natalie = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Natalie.jpg"
+const Nicole = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Nicole.jpg"
+const Olivia = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Olivia.jpg"
+const Sera = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sera.jpg"
+const Shannon = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon.jpg"
+const Shirell = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell.jpg"
+const Sierra = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sierra.jpg"
+
+
+
+
+
 const NameDisplay: React.FC = () => {
   // State to manage visibility of each card
   const [visibleCards, setVisibleCards] = useState<{ [key: number]: boolean }>({});
@@ -28,97 +52,97 @@ const NameDisplay: React.FC = () => {
     {
       id: "shirell",
       name: "SHIRELL BATTLE",
-      imageUrl: noImage,
+      imageUrl: Shirell,
     },
     {
       id: "olivia",
       name: "OLIVIA CAVALLERO",
-      imageUrl: noImage,
+      imageUrl: Olivia,
     },
     {
       id: "aliah",
       name: "ALIAH CHAMORRO",
-      imageUrl: noImage,
+      imageUrl: Aliah,
     },
     {
       id: "gavin",
       name: "GAVIN COOPER",
-      imageUrl: noImage,
+      imageUrl: Gavin,
     },
     {
       id: "sera",
       name: "SERA CRISTIN FERRANTE",
-      imageUrl: noImage,
+      imageUrl: Sera,
     },
     {
       id: "caitlin",
       name: "CAITLIN FRACASSO",
-      imageUrl: noImage,
+      imageUrl: Caitlin,
     },
     {
       id: "annika",
       name: "ANNIKA GEISSBERGER",
-      imageUrl: noImage,
+      imageUrl: Annika,
     },
     {
       id: "alyssa",
       name: "ALYSSA JONES",
-      imageUrl: noImage,
+      imageUrl: Alyssa,
     },
     {
       id: "emma",
       name: "EMMA KEATING",
-      imageUrl: noImage,
+      imageUrl: Emma,
     },
     {
       id: "shannon",
       name: "SHANNON KONECKE",
-      imageUrl: noImage,
+      imageUrl: Shannon,
     },
     {
       id: "madisyn",
       name: "MADISYN MARTINELLI",
-      imageUrl: noImage,
+      imageUrl: Madisyn,
     },
     {
       id: "deanna",
       name: "DEANNA MCNALLY",
-      imageUrl: noImage,
+      imageUrl: Deanna,
     },
     {
       id: "francesca",
       name: "FRANCESCA MORABITO",
-      imageUrl: noImage,
+      imageUrl: Francesca,
     },
     {
       id: "eva",
       name: "EVA REED",
-      imageUrl: noImage,
+      imageUrl: Eva,
     },
     {
       id: "david",
       name: "DAVID ROOT",
-      imageUrl: noImage,
+      imageUrl: David,
     },
     {
       id: "natalie",
       name: "NATALIE SWEENEY",
-      imageUrl: noImage,
+      imageUrl: Natalie,
     },
     {
       id: "nicole",
       name: "NICOLE TASCA",
-      imageUrl: noImage,
+      imageUrl: Nicole,
     },
     {
       id: "mo",
       name: "MO WALSH",
-      imageUrl: noImage,
+      imageUrl: Mo,
     },
     {
       id: "sierra",
       name: "SIERRA WEISSNER",
-      imageUrl: noImage,
+      imageUrl: Sierra,
     }
   ];
 
