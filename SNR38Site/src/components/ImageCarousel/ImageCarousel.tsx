@@ -17,21 +17,36 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const [isPaused, setIsPaused] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false); // State for overlay visibility
   const [iconSize, setIconSize] = useState(40); // State to hold the icon size
+  const [hamburgerBackgroundVisible, setHamburgerBackgroundVisible] = useState(false); // New state for the hamburger background visibility
+
+
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 750) {
         setIconSize(20); // Set icon size to 20 if window width is 950px or less
       } else {
-        setIconSize(40); // Set icon size to 40 for larger windows
+        setIconSize(45); // Set icon size to 40 for larger windows
       }
     };
+
+    const handleScroll = () => {
+      const threshold = 170; // Set scroll threshold to add background
+      setHamburgerBackgroundVisible(window.scrollY > threshold);
+    };
+
+
     // Call handleResize on component mount and on window resize
     handleResize();
     window.addEventListener("resize", handleResize);
+    window.addEventListener('scroll', handleScroll); // Listen to scroll events
+
 
     // Cleanup listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll); // Clean up scroll event listener
+    };
   }, []);
 
   const totalWidth = `${images.length * 100 * 2}%`;
@@ -50,7 +65,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className={`hamburger-icon ${!isOverlayVisible ? "visible" : ""}`}>
+      <div className={`hamburger-icon ${!isOverlayVisible ? "visible" : ""} ${hamburgerBackgroundVisible ? "overlay" : ""}`}>
         <FaBars size={iconSize} color="white" onClick={toggleOverlay} />
       </div>
       <div className={`close-icon ${isOverlayVisible ? "visible" : ""}`}>
