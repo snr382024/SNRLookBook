@@ -17,9 +17,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const [isPaused, setIsPaused] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false); // State for overlay visibility
   const [iconSize, setIconSize] = useState(40); // State to hold the icon size
-  const [hamburgerBackgroundVisible, setHamburgerBackgroundVisible] = useState(false); // New state for the hamburger background visibility
-
-
+  const [hamburgerBackgroundVisible, setHamburgerBackgroundVisible] =
+    useState(false); // New state for the hamburger background visibility
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,17 +34,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       setHamburgerBackgroundVisible(window.scrollY > threshold);
     };
 
-
     // Call handleResize on component mount and on window resize
     handleResize();
     window.addEventListener("resize", handleResize);
-    window.addEventListener('scroll', handleScroll); // Listen to scroll events
-
+    window.addEventListener("scroll", handleScroll); // Listen to scroll events
 
     // Cleanup listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll); // Clean up scroll event listener
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll); // Clean up scroll event listener
     };
   }, []);
 
@@ -65,14 +62,21 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className={`hamburger-icon ${!isOverlayVisible ? "visible" : ""} ${hamburgerBackgroundVisible ? "overlay" : ""}`}>
+      <div
+        className={`hamburger-icon ${!isOverlayVisible ? "visible" : ""} ${
+          hamburgerBackgroundVisible ? "overlay" : ""
+        }`}
+      >
         <FaBars size={iconSize} color="white" onClick={toggleOverlay} />
       </div>
       <div className={`close-icon ${isOverlayVisible ? "visible" : ""}`}>
         <FaTimes size={iconSize} color="white" onClick={toggleOverlay} />
       </div>
       <div className={`menu-overlay ${isOverlayVisible ? "visible" : ""}`}>
-        <Link to="/shirell" className="top">
+        <Link to="/" className="top">
+          <h1>HOME</h1>
+        </Link>
+        <Link to="/shirell">
           <h1>SHIRELL BATTLE</h1>
         </Link>
         <Link to="/olivia">

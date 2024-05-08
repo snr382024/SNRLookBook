@@ -34,7 +34,9 @@ body, html {
 .hamburger-icon.overlay {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   border-radius: 10px; /* Optional: adds rounded corners */
-  padding: 10px; /* Add some space around the icon */
+  padding-top: 10px; /* Add some space around the icon */
+  padding-bottom: 6px; /* Add some space around the icon */
+
 }
 
 .menu-overlay a {
@@ -59,7 +61,7 @@ body, html {
   h1 {
     color: white; /* Ensures text color is white */
     font-size: 15px; /* Adjusts font size to a smaller scale */
-    margin-top: 18.9px;
+    margin-top: 16px;
     margin-right: 20px;
     margin-left: 20px;
     transition: transform 0.3s ease; /* Smooth transition for transform effect */
@@ -67,7 +69,12 @@ body, html {
   }
   h1:hover {
     transform: scale(1.1); /* Increase size by 10% on hover */
-    color: #007BFF; /* Changes color to a nice blue on hover */
+    color: #5085C0; /* Changes color to a nice blue on hover */
+  }
+  .top{
+    h1{
+      color: #6b93c2; /* Changes color to a nice blue on hover */
+    }
   }
 
 }

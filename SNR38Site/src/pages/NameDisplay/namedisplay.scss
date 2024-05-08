@@ -1,11 +1,12 @@
-.name-display, .name-display.last-row {
+.name-display,
+.name-display.last-row {
   display: grid;
   gap: 4rem;
   padding: 1rem;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  margin-left: .5vw;
-  width: 100vw;  /* Unified width for consistency */
+  margin-left: 0.5vw;
+  width: 100vw; /* Unified width for consistency */
 }
 
 .name-display {
@@ -13,13 +14,12 @@
 }
 
 .name-display.last-row {
-  grid-template-columns: repeat(5, 1fr);  /* Adjust column count as needed */
+  grid-template-columns: repeat(5, 1fr); /* Adjust column count as needed */
   justify-content: center;
   gap: 4rem;
   padding: 1rem;
-  width: 59vw;  /* Unified width for consistency */
-  margin-left: 21vw
-
+  width: 59vw; /* Unified width for consistency */
+  margin-left: 21vw;
 }
 
 .name-row {
@@ -30,16 +30,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;  /* Use full width of the grid column */
-  max-width: 200px;  /* Optional: set a max-width to control size */
+  width: 100%; /* Use full width of the grid column */
+  max-width: 200px; /* Optional: set a max-width to control size */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  opacity: 0;  // Start invisible
-  transform: translateY(50px);  // Start slightly below the normal position
+  opacity: 0; // Start invisible
+  transform: translateY(50px); // Start slightly below the normal position
   transition: opacity 1s ease-out, transform 1s ease-out;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .designer-card:hover .designer-headshot {
@@ -52,9 +52,9 @@
 }
 
 .designer-headshot {
-  width: 100%;  /* Ensure the image fills the card */
+  width: 100%; /* Ensure the image fills the card */
   height: auto;
-  object-fit: cover;  /* Maintain aspect ratio without cropping */
+  object-fit: cover; /* Maintain aspect ratio without cropping */
 }
 
 .designer-name {
@@ -66,35 +66,37 @@
   width: 100%;
 }
 
+@media (min-width: 1900px) {
+  .name-display {
+    padding-left: 5vw;
+  }
+}
+
 @media (max-width: 950px) {
   .designer-name {
     font-size: 10.5px;
   }
   .designer-card {
     width: 100%;
-    max-width: none;  /* Allow full use of grid column */
+    max-width: none; /* Allow full use of grid column */
   }
   .name-display {
-    grid-template-columns: repeat(3, 1fr);  /* Consistent adjustment */
+    grid-template-columns: repeat(3, 1fr); /* Consistent adjustment */
     padding: 4vw;
-    margin-left: -1vw; 
+    margin-left: -1vw;
   }
-  .name-display.last-row{
-    width: 100vw;  /* Unified width for consistency */
+  .name-display.last-row {
+    width: 100vw; /* Unified width for consistency */
     padding-left: 4vw;
     padding-right: 4vw;
     padding-bottom: 4vw;
     padding-top: -5vw;
-    margin-left: -1vw; 
-
+    margin-left: -1vw;
   }
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
   .designer-name {
     font-size: 9px;
   }
 }
-
-
-

@@ -319,6 +319,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   text-decoration: none;
   transition: transform 0.2s ease;
   &:hover {
+    color: #5085C0; /* Changes color to a nice blue on hover */
     transform: scale(1.1); /* Scale up the link slightly on hover */
   }
   @media(max-width: 950px){

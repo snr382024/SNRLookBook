@@ -106,6 +106,25 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
     });
   };
 
+  const renderNavigationLinks = () => {
+    let links = Object.keys(nextName).map((name) => (
+      <Link key={name} to={nextName[name]} className="designer-link">
+        {name}
+      </Link>
+    ));
+
+    // Insert Home link in the middle
+    links.splice(
+      1,
+      0,
+      <Link key="home" to="/" className="designer-link">
+        HOME
+      </Link>
+    );
+
+    return <div className="page-navigator">{links}</div>;
+  };
+
   const desktopTemplate = (
     <>
       <div className="template-five-container">
@@ -201,13 +220,7 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
           </div>
         </div>
       </div>
-      <div className="page-navigator">
-        {Object.keys(nextName).map((name, index) => (
-          <Link key={index} to={nextName[name]} className="designer-link">
-            {index === 0 ? `${name}` : `${name} `}
-          </Link>
-        ))}
-      </div>
+      <div className="page-navigator">{renderNavigationLinks()}</div>
     </>
   );
 
@@ -307,13 +320,7 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
           <video src={videoSrc} loop autoPlay muted playsInline />
         </div>
       </div>
-      <div className="page-navigator">
-        {Object.keys(nextName).map((name, index) => (
-          <Link key={index} to={nextName[name]} className="designer-link">
-            {index === 0 ? `${name}` : `${name} `}
-          </Link>
-        ))}
-      </div>
+      <div className="page-navigator">{renderNavigationLinks()}</div>
     </>
   );
 
