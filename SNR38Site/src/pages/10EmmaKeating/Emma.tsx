@@ -16,8 +16,6 @@ const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/EmmaLook 
 const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 3 Front.png";
 const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Look 3 Back.png";
 
-import test from "../../assets/media/Look 2 Back .png";
-
 const EmmaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Emma-Banner.png";
 import "./emma.scss";
 
