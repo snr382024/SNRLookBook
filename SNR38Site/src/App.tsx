@@ -19,7 +19,7 @@ import Deanna from "./pages/13DeannaMcnally/Deanna"; //Temp 4
 import Francesca from "./pages/14FrancescaMorabito/Francesca"; //Temp 1
 import Eva from "./pages/15EvaReed/Eva"; //Temp 3
 import David from "./pages/16DavidRoot/David"; //Temp 4
-import Natalie from "./pages/17NatalieSweeney/Natalie"; //Temp 5
+import Natalie from "./pages/17NatalieSweeney/Natalie"; //Temp 6
 import Nicole from "./pages/18NicoleTasca/Nicole"; //Temp 1
 import Mo from "./pages/19MoWalsh/Mo"; //Temp 3
 import Sierra from "./pages/20SierraWeissner/Sierra"; //Temp 4

@@ -268,6 +268,9 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       overflow: hidden;
       position: relative;
       box-shadow: $background-shadow;
+      @media (max-width: 550){
+        max-height: 500vh;
+      }
   
       video {
         width: 100%; // Ensure video fills the container
