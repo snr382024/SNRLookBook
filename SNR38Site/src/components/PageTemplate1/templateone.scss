@@ -190,6 +190,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
     flex: 2;
     max-height: 98vh;
     margin-bottom: 5vh;
+    margin-right: 5vh;
     overflow: hidden;
     position: relative;
     box-shadow: $background-shadow;
@@ -198,7 +199,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      //object-position: center 20%;
     }
   }
 

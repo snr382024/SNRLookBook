@@ -82,6 +82,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         <Link to="/olivia">
           <h1>OLIVIA CAVALLERO</h1>
         </Link>
+        <Link to="/aliah">
+          <h1>ALIAH CHAMORRO</h1>
+        </Link>
         <Link to="/gavin">
           <h1>GAVIN COOPER</h1>
         </Link>
