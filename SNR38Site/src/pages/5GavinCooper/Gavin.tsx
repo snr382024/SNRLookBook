@@ -9,12 +9,12 @@ const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 detail 2 copy.jpg";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 detail copy.jpg";
 
-const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 1 front.jpg";
-const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/tates back fixed.png";
-const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 front copy.jpg";
-const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 2 front 2 copy.jpg";
-const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 front 2.jpg";
-const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/gavin look 3 side copy.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newgavin look 1 front.jpg";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newtates back fixed.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newgavin look 2 front copy.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newgavin look 2 front 2 copy.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newgavin look 3 front 2.jpg";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newgavin look 3 side copy.jpg";
 
 import "./gavin.scss";
 

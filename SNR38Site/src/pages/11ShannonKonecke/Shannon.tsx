@@ -8,13 +8,13 @@ const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Lo
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Pose 2.png"; //crop to get hand
 
 const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 3 - Front.png";
-const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 3 - Side Pose.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShannon - Look 3 - Side Pose.png";
 const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 1 - Front Pose.png";
-const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 1 - Side Pose.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShannon - Look 1 - Side Pose.png";
 const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 4 - Front Pose.png";
 const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 4 - Back.png";
 const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Pose.png";
-const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon - Look 2 - Side.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShannon - Look 2 - Side.png";
 
 const ShannonBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shannon-Banner.png";
 import "./shannon.scss";

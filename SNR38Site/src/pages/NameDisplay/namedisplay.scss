@@ -1,14 +1,25 @@
-.name-display {
+.name-display, .name-display.last-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* This should create three columns */
-  justify-content: center;
-  align-items: start;
-  gap: 4rem; /* Adjust the gap to ensure proper spacing */
+  gap: 4rem;
   padding: 1rem;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  margin-left: 2vw;
-  width: 100%;
+  margin-left: .5vw;
+  width: 100vw;  /* Unified width for consistency */
+}
+
+.name-display {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.name-display.last-row {
+  grid-template-columns: repeat(5, 1fr);  /* Adjust column count as needed */
+  justify-content: center;
+  gap: 4rem;
+  padding: 1rem;
+  width: 59vw;  /* Unified width for consistency */
+  margin-left: 21vw
+
 }
 
 .name-row {
@@ -19,7 +30,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
+  width: 100%;  /* Use full width of the grid column */
+  max-width: 200px;  /* Optional: set a max-width to control size */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   border-radius: 10px;
@@ -27,7 +39,7 @@
   opacity: 0;  // Start invisible
   transform: translateY(50px);  // Start slightly below the normal position
   transition: opacity 1s ease-out, transform 1s ease-out;
-  cursor: pointer; /* Indicates the card is clickable */
+    cursor: pointer;
 }
 
 .designer-card:hover .designer-headshot {
@@ -40,10 +52,9 @@
 }
 
 .designer-headshot {
-  width: 100%;
+  width: 100%;  /* Ensure the image fills the card */
   height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease; /* Ensures smooth zoom effect */
+  object-fit: cover;  /* Maintain aspect ratio without cropping */
 }
 
 .designer-name {
@@ -57,19 +68,33 @@
 
 @media (max-width: 950px) {
   .designer-name {
-    font-size: 12px;
-
-  }
-  .designer-headshot {
-    width: 110%;
-
+    font-size: 10.5px;
   }
   .designer-card {
     width: 100%;
+    max-width: none;  /* Allow full use of grid column */
   }
   .name-display {
-    margin-left: .5vw;
-    margin-right: 5vw;
-    grid-template-columns: repeat(2, 1fr); /* Adjusts to two columns below 950px */
+    grid-template-columns: repeat(3, 1fr);  /* Consistent adjustment */
+    padding: 4vw;
+    margin-left: -1vw; 
+  }
+  .name-display.last-row{
+    width: 100vw;  /* Unified width for consistency */
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 4vw;
+    padding-top: -5vw;
+    margin-left: -1vw; 
+
   }
 }
+
+@media(max-width: 400px){
+  .designer-name {
+    font-size: 9px;
+  }
+}
+
+
+

@@ -217,7 +217,7 @@ const TemplateTwo: React.FC<TemplateTwoProps> = ({
               </div>
             </div>
             <div className="square2">
-              <img src={images[2].src} alt={images[2].alt} />
+              <img src={images[14].src} alt={images[14].alt} />
             </div>
             <div className="square3">
               <img src={images[3].src} alt={images[3].alt} />
@@ -257,7 +257,7 @@ const TemplateTwo: React.FC<TemplateTwoProps> = ({
               </div>
             </div>
             <div className="square9">
-              <img src={images[3].src} alt={images[3].alt} />
+              <img src={images[1].src} alt={images[1].alt} />
             </div>
           </div>
         </div>

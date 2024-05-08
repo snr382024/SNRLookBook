@@ -7,14 +7,14 @@ const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook1Detai
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Detail.png";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Detail.png";
 
-const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook4Front.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewMoLook4Front.png";
 const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook4Side.png";
-const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/mo fixed hair.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Newmo fixed hair.png";
 const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook1Side.png";
-const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Front.png";
-const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook3Side.png";
-const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Front.png";
-const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/MoLook2Back.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewMoLook3Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewMoLook3Side.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewMoLook2Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNewMoLook2Back.png";
 
 const MoBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Mo-Banner.png";
 import "./mo.scss";

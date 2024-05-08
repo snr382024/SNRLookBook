@@ -28,10 +28,7 @@ const Sierra = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Sierra.jpg"
 
 
 const NameDisplay: React.FC = () => {
-  // State to manage visibility of each card
   const [visibleCards, setVisibleCards] = useState<{ [key: number]: boolean }>({});
-
-  // Refs to hold references to each card element
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -146,20 +143,46 @@ const NameDisplay: React.FC = () => {
     }
   ];
 
+  const firstTwoRows = designers.slice(0, 15);  // First 14 designers (two rows of 7)
+  const lastRow = designers.slice(16);          // Remaining designers for the last row
+
   return (
-    <div className="name-display">
-      {designers.map((designer, index) => (
-        <Link to={`/${designer.id}`} key={designer.id} style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div
-            ref={el => cardRefs.current[index] = el}
-            className={`designer-card ${visibleCards[index] ? "slide-in" : ""}`}
-          >
-            <img src={designer.imageUrl || noImage} alt={designer.name} className="designer-headshot" />
-            <div className="designer-name">{designer.name}</div>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <>
+      <div className="name-display">
+        {firstTwoRows.map((designer, index) => (
+          <Link to={`/${designer.id}`} key={designer.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div
+              ref={el => cardRefs.current[index] = el}
+              className={`designer-card ${visibleCards[index] ? "slide-in" : ""}`}
+            >
+              <img src={designer.imageUrl || noImage} alt={designer.name} className="designer-headshot" />
+              <div className="designer-name">
+              {designer.name.split(" ").map((part, idx) => (
+                <div key={idx}>{part}</div>
+              ))}
+            </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+      <div className="name-display last-row" style={{ gridTemplateColumns: `repeat(${lastRow.length}, 1fr)` }}>
+        {lastRow.map((designer, index) => (
+          <Link to={`/${designer.id}`} key={designer.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div
+              ref={el => cardRefs.current[index + 15] = el} // Adjust index for refs
+              className={`designer-card ${visibleCards[index + 15] ? "slide-in" : ""}`}
+            >
+              <img src={designer.imageUrl || noImage} alt={designer.name} className="designer-headshot" />
+              <div className="designer-name">
+              {designer.name.split(" ").map((part, idx) => (
+                <div key={idx}>{part}</div>
+              ))}
+            </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
 

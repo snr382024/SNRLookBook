@@ -7,14 +7,16 @@ const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4D
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Detail.png";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Detail.png";
 
-const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook1Front.png";
-const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook1Back.png";
-const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4Front.png";
-const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook4Back.png";
-const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Front.png";
-const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook2Side.png";
-const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Front.png";
-const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NicoleLook3Back.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook1Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook1Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook4Front.png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook4Back.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook2Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook2Side.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook3Front.png";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewNicoleLook3Back.png";
+
+
 
 
 const NicoleBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Nicole-Banner.png";

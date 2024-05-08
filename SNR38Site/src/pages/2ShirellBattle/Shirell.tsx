@@ -9,12 +9,12 @@ const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/SDetail.png"
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Detail Shot.png";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/detail4.png";
 
-const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell Look 2 Front.png";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShirell Look 2 Front .png";
 const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell 2 Back.png";
-const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel Look 3 front.png";
-const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shirell 3 Front.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShireel Look 3 front .png";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShirell 3 Front.png";
 const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel 1 Side.png";
-const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Shireel 1 Front p2.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewShireel 1 Front p2.png";
 
 
 import "./shirell.scss";

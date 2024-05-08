@@ -3,8 +3,9 @@ import CoverPage from "./pages/CoverPage/CoverPage";
 import NameDisplay from "./pages/NameDisplay/NameDisplay";
 import Footer from "./components/footer/Footer";
 
-import Olivia from "./pages/3OliviaCavallero/Olivia"; //Temp 1
+
 import Shirell from "./pages/2ShirellBattle/Shirell"; //Temp 5
+import Olivia from "./pages/3OliviaCavallero/Olivia"; //Temp 1
 import Aliah from "./pages/4AliahChammoro/Aliah"; //Temp 3
 import Gavin from "./pages/5GavinCooper/Gavin"; //Temp 5
 import Sera from "./pages/6SeraCristinFerrante/Sera"; //Temp 4

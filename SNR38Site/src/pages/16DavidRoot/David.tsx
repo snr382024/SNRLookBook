@@ -8,14 +8,15 @@ const Short2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1
 const Short3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Detail.png";
 const Short4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 DETAIL.jpg";
 
-const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David - Look Vest - Front.png";
-const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David - Look Vest - Back.png";
-const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1 FRONT copy.jpg";
-const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 1 BACK copy.jpg";
-const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Front.png";
-const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DavidJacketDay2Back.png";
-const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 FRONT.jpg";
-const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DAVID LOOK 2 BACK.jpg";
+const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDavid - Look Vest - Front.png";
+const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDavid - Look Vest - Back.png";
+const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDAVID LOOK 1 FRONT copy.jpg";
+const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDAVID LOOK 1 BACK copy.jpg";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDavidJacketDay2Front.png";
+const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDavidJacketDay2Back.png";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDAVID LOOK 2 FRONT.jpg";
+const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDAVID LOOK 2 BACK.jpg";
+
 
 
 const DavidBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/David-Banner.png";

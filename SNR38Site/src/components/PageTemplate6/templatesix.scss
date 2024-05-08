@@ -1,0 +1,337 @@
+$background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
+
+.template-five-container {
+  margin-top: 3.5vh;
+  margin-right: 2.5vh;
+
+  @media (max-width: 950px) {
+    margin: .5vh;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; // This will distribute space around all items evenly
+  align-items: flex-start;
+
+  @keyframes fadeInOut {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    10%,
+    80% {
+      opacity: 1;
+    } // The overlay will start fading out after 4 seconds
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .image-wrapper {
+    display: flex;
+    flex-wrap: wrap; // Allows items to wrap if needed
+    justify-content: space-around; // Distribute space evenly within the wrapper
+
+    .column-type1,
+    .column-type2,
+    .column-type3 {
+      flex: 1; 
+      margin-bottom: 1.5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: 950px) {
+        margin: 1.5vh;
+      }
+
+      @media (max-width: 550px) {
+        margin: .2vh;
+      }
+
+
+      .rectangle {
+        margin-bottom: 3.3vh;
+        
+        img {
+          width: 12vw;
+          height: 18vh;
+          
+          box-shadow: $background-shadow;
+        }
+      }
+
+
+      .rectangle {
+        position: relative;
+        perspective: 1000px;
+        width: 12vw;
+        height: 71vh;
+        cursor: pointer;
+        // Overlay and icon wrapper
+        .arrow-icon-wrapper {
+          position: absolute;
+          right: -15px;
+          bottom: -165px;
+          width: 35px;
+          height: 35px;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 10px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          opacity: 0; // start hidden
+          visibility: hidden; // start fully hidden
+          transition: opacity 0.5s ease, visibility 0.5s ease;
+        
+          &.visible {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          @media (max-width: 950px) {
+            width: 10px;
+            height: 10px;
+            right: 5px;
+            bottom: 5px;        
+          }
+        }
+
+        // Arrow icon specific styling
+        .arrow-icon {
+          width: 25px; // Independently adjustable size of the arrow
+          height: 25px; // Independently adjustable size of the arrow
+          @media (max-width: 950px) {
+            width: 10px;
+            height: 10px;      
+          }
+        }
+        img {
+          width: 14vw;
+          height: 95vh;
+          max-height: 95vh;
+
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: $background-shadow;
+        }
+        .flip-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .flipper {
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+
+        .front,
+        .back {
+          backface-visibility: hidden;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+
+        .front {
+          z-index: 2;
+          transform: rotateY(0deg);
+        }
+
+        .back {
+          transform: rotateY(180deg);
+        }
+
+        .flipped .flipper {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+
+    .column-type1 {
+      .rectangle {
+        order: 2;
+      }
+    }
+
+    .column-type3{
+        margin-left: 4vh;
+    }
+
+  
+  }
+
+  .video-container {
+    flex: 2; 
+    max-height: 95vh;
+    margin-bottom: 6vh; // Consistent bottom margin outside of media query
+    margin-left: 2vw;
+    margin-right: 1vw;
+    video {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+      box-shadow: $background-shadow;
+    }
+  }
+
+  // Media query for smaller screen
+
+  @media (max-width: 950px){
+    flex-direction: column;
+    align-items: center;
+  
+    .image-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; // This helps in spacing out the columns
+  
+      .column-type1,
+      .column-type2 {
+        width: calc(50% - 2vw); // Adjust width calculation for better responsiveness
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1vw; // Add horizontal padding to create space between columns
+  
+        .square,
+        .rectangle {
+          img {
+            width: 100%; // Ensure images use the full width of their container
+            height: auto; // Maintain aspect ratio
+            box-shadow: $background-shadow;
+          }
+        }
+        
+        .rectangle {
+          width: 15vw;
+          height: 41vh; // Fixed height for rectangles
+          img {
+            height: 100%; // Ensure images use the full height of their container
+          }
+        }
+      }
+    }
+  
+    .video-container {
+      width: 100%; // Full width to match the layout
+      height: 10vh; // Fixed height for consistency
+      margin-top: 2vh; // Add top margin for spacing
+      position: relative;
+      display: flex;
+      justify-content: center; // Center the video horizontally
+      align-items: center; // Center the video vertically
+      background-color: #FAFAFA;
+      box-shadow: none;
+
+
+  
+      video {
+        width: 50%; // Ensure video fills the container
+        height: 100%; // Maintain aspect ratio
+        object-fit: cover; // Ensure the video covers the full area without distortion
+        box-shadow: none;
+
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  
+    .image-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; // This helps in spacing out the columns
+  
+      .column-type1,
+      .column-type2 {
+        width: calc(50% - 2vw); // Adjust width calculation for better responsiveness
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1vw; // Add horizontal padding to create space between columns
+  
+        .square,
+        .rectangle {
+          img {
+            width: 100%; // Ensure images use the full width of their container
+            height: auto; // Maintain aspect ratio
+            box-shadow: $background-shadow;
+          }
+        }
+        
+        .rectangle {
+          width: 20vw;
+          height: 41vh; // Fixed height for rectangles
+          img {
+            height: 100%; // Ensure images use the full height of their container
+          }
+        }
+      }
+    }
+  
+    .video-container {
+      width: 100%; // Full width to match the layout
+      height: 10vh; // Fixed height for consistency
+      margin-top: 2vh; // Add top margin for spacing
+      position: relative;
+      display: flex;
+      justify-content: center; // Center the video horizontally
+      align-items: center; // Center the video vertically
+      background-color: #FAFAFA;
+      box-shadow: none;
+  
+      video {
+        width: 80%; // Ensure video fills the container
+        height: 100%; // Maintain aspect ratio
+        object-fit: cover; // Ensure the video covers the full area without distortion
+        box-shadow: none;
+
+      }
+    }
+  }
+  
+}
+
+.page-navigator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust margin as needed */
+  margin-bottom: 30px;
+  @media(max-width: 950px){
+    margin-top: 5px;
+  }
+}
+
+.designer-link {
+  color: black;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 20px; /* Adjust font size as needed */
+  margin: 0 50px; /* Adjust spacing between links */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.1); /* Scale up the link slightly on hover */
+  }
+  @media(max-width: 950px){
+    font-size: 12px;
+    margin: 0 20px; /* Adjust spacing between links */
+
+  }
+}
+.designer-link:first-child::before {
+  content: "< ";
+}
+
+.designer-link:last-child::after {
+  content: " >";
+}
+

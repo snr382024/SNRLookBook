@@ -1,19 +1,19 @@
-// TemaplteFive.tsx
+// TemaplteSix.tsx
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import arrowIcon from "../../assets/icons/arrow-right-white.png";
-import ImageCarousel from "../../components/imageCarouselY/imageCarouselY"; // Update the path as necessary
+import ImageCarousel from "../imageCarouselY/imageCarouselY"; // Update the path as necessary
 
-import "./templatefive.scss";
+import "./templatesix.scss";
 
-type TemplateFiveProps = {
+type TemplateSixProps = {
   images: { src: string; alt: string }[];
   nextName: { [key: string]: string };
   videoSrc: string;
 };
 
-const TemplateFive: React.FC<TemplateFiveProps> = ({
+const TemplateSix: React.FC<TemplateSixProps> = ({
   images,
   nextName,
   videoSrc,
@@ -174,28 +174,16 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
           <div className="column-type2">
             <div
               className="rectangle"
-              ref={refs[3]}
-              onClick={() => handleFlip(3)}
             >
-              {" "}
+
               <div
-                className={`flip-container ${isFlipped[3] ? "flipped" : ""}`}
+                className={`flip-container`}
               >
                 <div className="flipper">
                   <div className="front">
                     <img src={images[8].src} alt={images[8].alt} />
                   </div>
-                  <div className="back">
-                    <img src={images[9].src} alt={images[9].alt} />
-                  </div>
                 </div>
-              </div>
-              <div
-                className={`arrow-icon-wrapper ${
-                  isVisible[3] ? "visible" : ""
-                }`}
-              >
-                <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
               </div>
             </div>
           </div>
@@ -277,28 +265,16 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
           <div className="column-type1">
             <div
               className="rectangle"
-              ref={refs[2]}
-              onClick={() => handleFlip(2)}
             >
               {" "}
               <div
-                className={`flip-container ${isFlipped[2] ? "flipped" : ""}`}
+                className={`flip-container`}
               >
                 <div className="flipper">
                   <div className="front">
                     <img src={images[8].src} alt={images[8].alt} />
                   </div>
-                  <div className="back">
-                    <img src={images[9].src} alt={images[9].alt} />
-                  </div>
                 </div>
-              </div>
-              <div
-                className={`arrow-icon-wrapper ${
-                  isVisible[0] ? "visible" : ""
-                }`}
-              >
-                <img src={arrowIcon} alt="Arrow icon" className="arrow-icon" />
               </div>
             </div>
           </div>
@@ -320,4 +296,4 @@ const TemplateFive: React.FC<TemplateFiveProps> = ({
   return isMobile ? mobileTemplate : desktopTemplate;
 };
 
-export default TemplateFive;
+export default TemplateSix;

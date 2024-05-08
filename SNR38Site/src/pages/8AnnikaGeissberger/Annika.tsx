@@ -11,10 +11,13 @@ const LongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika F
 const LongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika 2 .png";
 const LongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look2Front.png";
 const LongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look2Side.png";
-const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look3Front.png";
+const LongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewAnnikaDay2Look3Front.png";
 const LongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Look3Back.png";
-const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Front.jpg";
+const LongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewAnnikaDay2Front.jpg";
 const LongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/AnnikaDay2Back.jpg";
+
+
+
 
 const AnnikaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Annika-Banner.png";
 import "./annika.scss";

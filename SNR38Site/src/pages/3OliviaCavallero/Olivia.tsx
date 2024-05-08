@@ -12,10 +12,10 @@ const OliviaLongFront1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DS
 const OliviaLongBack1 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/ClareBackLegEdit.png";
 const OliviaLongFront2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01960.jpg";
 const OliviaLongBack2 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01952.jpg";
-const OliviaLongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01999.jpg";
+const OliviaLongFront3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewDSC01999.jpg";
 const OliviaLongBack3 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/DSC01989.jpg";
 const OliviaLongFront4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/LOOK 1 FRONT.png";
-const OliviaLongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/BACK .png";
+const OliviaLongBack4 = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/NewBACK.png";
 
 
 const OliviaBanner = "https://pub-60cf3ae8c64d402eaf4ecbc5effb7c05.r2.dev/Olivia-Banner.png";
