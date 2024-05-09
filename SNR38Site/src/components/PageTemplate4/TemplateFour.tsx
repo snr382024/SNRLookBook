@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
 import arrowIcon from "../../assets/icons/arrow-right-white.png";
 
@@ -100,24 +101,45 @@ const TemplateFour: React.FC<TemplateFourProps> = ({
     };
   }, []);
 
+
   const renderNavigationLinks = () => {
-    let links = Object.keys(nextName).map((name) => (
-      <Link key={name} to={nextName[name]} className="designer-link">
-        {name}
-      </Link>
-    ));
-
-    // Insert Home link in the middle
-    links.splice(
-      1,
-      0,
-      <Link key="home" to="/" className="designer-link">
-        HOME
-      </Link>
-    );
-
-    return <div className="page-navigator">{links}</div>;
+    if (nextName && typeof nextName === 'object') {
+      const entries = Object.entries(nextName);
+      const links = entries.map(([fullName, link], index) => {
+        const [firstName, lastName] = fullName.split(" ");
+        return (
+          <div key={index} className="nav-link-container">
+            {index === 0 && <SlArrowLeft className="arrow-icon" />}
+            <Link to={link} className="link">
+              <p>{firstName}</p>
+              <p>{lastName}</p>
+            </Link>
+            {index === entries.length - 1 && <SlArrowRight className="arrow-icon right" />}
+          </div>
+        );
+      });
+  
+      const middleIndex = Math.floor((links.length + 1) / 2);
+      const homeLink = (
+        <div key="home" className="home-link">  
+          <Link to="/" className="link">
+            <p>HOME</p>
+          </Link>
+        </div>
+      );
+  
+      links.splice(middleIndex, 0, homeLink);
+  
+      return <div className="nav-links-container">{links}</div>;
+    } else {
+      return <p>No names available</p>;
+    }
   };
+  
+  
+  
+  
+  
 
   const desktopTemplate = (
     <>

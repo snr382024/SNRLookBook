@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;900&display=swap');
+
+
+@media(max-width: 450px){
+  *{
+    font-family: 'Kanit Black', sans-serif;
+    font-weight: 900;  /* Kanit Black */
+
+  }
+}
 
 
 html,
@@ -8,14 +18,14 @@ img {
   padding: 0 ;
   border: 0 ;
   box-sizing: border-box;
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: "Arial Black", Arial, sans-serif !important;
 
 }
 
 body {
   overflow-x: hidden;
   background-color: #FAFAFA;
-  font-family: "Arial Black", Arial, sans-serif;
+  font-family: "Arial Black", Arial, sans-serif !important;
 
 
 }

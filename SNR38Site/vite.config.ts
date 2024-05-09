@@ -5,6 +5,11 @@ import vercel from 'vite-plugin-vercel';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(),vercel()],
+  server:{
+    host: '0.0.0.0',
+    port: 5173,
+    open: true
+  },
   build: {
     outDir: 'dist',
     rollupOptions: {

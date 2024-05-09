@@ -155,13 +155,13 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
       grid-column: 1 / -1; // Stretch video across all columns
     }
     @media (max-width: 800px) {
-      height: 50vh;
+      height: 80vh;
     }
     @media (max-width: 650px) {
-      height: 50vh;
+      height: 80vh;
     }
     @media (max-width: 500px) {
-      height: 50vh;
+      height: 80vh;
     }
 
     video {
@@ -208,7 +208,7 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
           height: 41vh;
           img {
             width: 20vw;
-            height: 41vh;
+            height: 40.5vh;
             box-shadow: $background-shadow;
           }
         }
@@ -235,37 +235,105 @@ $background-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
   }
 }
 
-.page-navigator {
+
+.page-navigator{
+  margin-top: 1vw;
+  margin-bottom: 4vw;
+}
+
+// Define styles for navigation link containers
+.nav-link-container {
+  flex: 1;
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Adjust margin as needed */
-  margin-bottom: 30px;
-  @media(max-width: 950px){
-    margin-top: 5px;
+  align-items: center;
+  position: relative; // Ensure it's correctly positioned
+
+  .link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, color 0.3s; // Smooth transformation and color change for hover effect
+
+    &:hover {
+      transform: scale(1.1);
+      color: #5085c0;
+
+      p {
+        color: inherit; // Ensure paragraphs inherit the hover color
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
+      &:last-child {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  // Ensure the first child also has no issues with margin or overlapping
+  &:first-child {
+    .link {
+      z-index: 1; // Ensure it's on top and not covered by any previous elements
+
+      &:hover {
+        transform: scale(1.1);
+        color: #5085c0;
+      }
+    }
+  }
+
+  .arrow-icon {
+    margin-right: 8px; // Right margin for left arrow
+    &.right {
+      margin-left: 8px; // Left margin for right arrow
+    }
   }
 }
 
-.designer-link {
-  color: black;
-  font-family: "Arial Black", Arial, sans-serif;
-  font-size: 20px; /* Adjust font size as needed */
-  margin: 0 50px; /* Adjust spacing between links */
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  &:hover {
-    color: #5085C0; /* Changes color to a nice blue on hover */
-    transform: scale(1.1); /* Scale up the link slightly on hover */
-  }
-  @media(max-width: 950px){
-    font-size: 12px;
-    margin: 0 20px; /* Adjust spacing between links */
+// Special styling for the "Home" link to make it stand out
+.home-link {
+  flex: 1.5;
+  margin: 0 -45vw; // Adjust margin if it's causing overlap
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .link {
+    z-index: 1; // Ensure it's on top and not covered by any previous elements
+    text-decoration: none;
+    color: black; // Set the default color to black
+    transition: transform 0.3s, color 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      color: #5085c0; // Change to this color on hover
+    }
+  }
+
+  @media(max-width: 650px){
+    flex: 1.5;
+    margin: 0 20px;
+  }
+  @media(max-width: 450px){
+    flex: 1.5;
+    margin: 0 10px;
   }
 }
-.designer-link:first-child::before {
-  content: "< ";
+
+// Flex container for overall alignment
+.nav-links-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.designer-link:last-child::after {
-  content: " >";
-}
+
+
+
