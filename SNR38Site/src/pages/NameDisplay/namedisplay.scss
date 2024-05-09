@@ -66,9 +66,12 @@
   width: 100%;
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1800px) {
   .name-display {
-    padding-left: 5vw;
+    padding-left: 4vw;
+  }
+  .name-display.last-row{
+    padding-left: 3.6vw;
   }
 }
 
@@ -92,6 +95,7 @@
     padding-bottom: 4vw;
     padding-top: -5vw;
     margin-left: -1vw;
+
   }
 }
 
